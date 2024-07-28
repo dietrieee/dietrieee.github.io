@@ -26,5 +26,10 @@ a {
   .container {
     margin: 30px;
   }
+  body {
+    text-align: justify;
+    text-justify: inter-word;
+  }
+  }
 }
 
