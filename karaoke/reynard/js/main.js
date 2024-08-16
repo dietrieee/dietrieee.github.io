@@ -1,27 +1,38 @@
+var nowSinging = [];
+
 var list = [];
 var state = "add";
+var editType = "";
 var _index = 0;
 $("#song").keypress(function (e) {
   if (e.which == 13) {
     if (state == "add") {
       const uuid = new Date();
       let _data = { id: uuid.getTime(), value: $("#song").val() };
-      if (list.length == 0) {
-        list.push(_data);
-      } else {
-        list.unshift(_data);
-      }
-      console.log(list);
 
-      addList();
+      let isEmpty =
+        $("#now-singing-list").children().length == 0 ? true : false;
+      if (isEmpty) {
+        nowSinging.push(_data);
+        addList(_data, "now-singing");
+      } else {
+        list.push(_data);
+        addList(_data, "list");
+      }
+
+      // console.log(list);
     } else {
       // console.log("Editing", list[_index]);
-
-      list[_index].value = $("#song").val();
-      console.log($("#song-list .parent-list").eq(_index));
+      if (editType == "list") {
+        list[_index].value = $("#song").val();
+        updateList(list[_index], _index);
+      } else {
+        nowSinging[0].value = $("#song").val();
+        updateList(nowSinging[0], 0);
+      }
+      // console.log($("#song-list .parent-list").eq(_index));
 
       state = "add";
-      updateList();
       // console.log("Edited", list[_index]);
     }
 
@@ -37,9 +48,11 @@ Array.prototype.move = function (from, to) {
 };
 
 $("#song-list").sortable({
+  group: "list-song",
   onEnd: function (/**Event*/ evt) {
-    console.log(evt.oldDraggableIndex + 1, evt.newDraggableIndex + 1);
-    list.move(evt.oldDraggableIndex + 1, evt.newDraggableIndex + 1);
+    console.log(evt.oldDraggableIndex, evt.newDraggableIndex);
+    list.move(evt.oldDraggableIndex, evt.newDraggableIndex);
+    console.log(list);
   },
 });
 
@@ -78,60 +91,67 @@ $("#header")
     });
   });
 
-function updateList() {
-  $("#song-list").empty();
-
-  for (let i = list.length - 1; i >= 0; i--) {
-    console.log(i);
-
-    let indexInArray = list[i].id;
-    let valueOfElement = list[i].value;
-
-    if (i == 0) {
-      $("#now-singing-list .parent-title-now-singing .title-now-singing").html(
-        valueOfElement
-      );
-    }
-    if (i > 0) {
-      $("#song-list")
-        .prepend(` <div class='s-container'> <div class="parent-title"><div  class="title ">${valueOfElement}</div></div> <button onclick="edit(${indexInArray})" class="btn btn-action btn-light  action"> <i class="icon-pencil"></i>
-    </button><button onclick="deleteSong(${indexInArray})" class="btn btn-light btn-action  action"> <i class="icon-eraser"></i>
-    </button> </div>`);
-    }
-  }
-
-  // $.each(list, function (indexInArray, valueOfElement) {});
-  console.log(list);
-}
-function addList() {
-  // $('#song-list').empty()
-  let index = 0;
-  let value = list[index].value;
-  if (list.length == 1) {
-    $("#now-singing-list").append(
-      `<div class="parent-title-now-singing"><div  class="title-now-singing ">${value}</div></div>`
-    );
+function updateList(data, index) {
+  if (editType == "list") {
+    let selected = $("#song-list").children().eq(index);
+    selected.children().eq(0).find(".title").html(data.value);
   } else {
-    $("#now-singing-list .parent-title-now-singing .title-now-singing").html(
-      value
+    let selected = $("#now-singing-list").children().eq(0);
+    selected.children().eq(0).find(".title-now-singing").html(data.value);
+  }
+}
+function addList(data, type) {
+  // $('#song-list').empty()
+
+  if (type == "now-singing") {
+    $("#now-singing-list").append(
+      `<div class='s-container'> <div class="parent-title-now-singing"><div  class="title-now-singing ">${data.value}</div></div><button onclick="edit(${data.id}, 'now-singing')" class="btn btn-action btn-light  action"> <i class="icon-pencil"></i>
+    </button><button onclick="deleteSong(${data.id}, 'now-singing')" class="btn btn-light btn-action  action"> <i class="icon-eraser"></i>
+    </button> </div>`
     );
   }
   // console.log(_index);
-  if (list.length > 1) {
+  if (type == "list") {
     $("#song-list")
-      .prepend(` <div class='s-container'> <div class="parent-title"><div  class="title ">${list[1].value}</div></div> <button onclick="edit(${list[1].id})" class="btn btn-action btn-light  action"> <i class="icon-pencil"></i>
-    </button><button onclick="deleteSong(${list[1].id})" class="btn btn-light btn-action  action"> <i class="icon-eraser"></i>
+      .append(` <div class='s-container'> <div class="parent-title"><div  class="title ">${data.value}</div></div> <button onclick="edit(${data.id}, 'list')" class="btn btn-action btn-light  action"> <i class="icon-pencil"></i>
+    </button><button onclick="deleteSong(${data.id}, 'list')" class="btn btn-light btn-action  action"> <i class="icon-eraser"></i>
+    </button><button onclick="play(${data.id})" class="btn btn-action btn-light  action"> <i class="icon-play"></i>
     </button> </div>`);
   }
 }
-function edit(id) {
+
+function play(id) {
   var index = list.findIndex(function (data) {
     return data.id == id;
   });
-  _index = index;
+  // console.log(nowSinging);
+
+  if (nowSinging.length == 0) {
+    nowSinging.push(list[index]);
+    addList(list[index], "now-singing");
+  } else {
+    nowSinging[0] = list[index];
+    // console.log(data);
+
+    $(".title-now-singing").html(nowSinging[0].value);
+  }
+}
+
+function edit(id, type) {
+  console.log(type, id);
+  editType = type;
+  if (type == "list") {
+    var index = list.findIndex(function (data) {
+      return data.id == id;
+    });
+    _index = index;
+    $("#song").val(list[index].value);
+  } else {
+    _index = 0;
+    $("#song").val(nowSinging[0].value);
+  }
   state = "edit";
 
-  $("#song").val(list[index].value);
   $(".parent-input").css({
     "margin-top": "48px",
     opacity: 1,
@@ -140,17 +160,16 @@ function edit(id) {
   });
   $(".parent-input #song").focus();
 }
-function deleteSong(id) {
-  var index = list.findIndex(function (data) {
-    return data.id == id;
-  });
+function deleteSong(id, type) {
+  if (type == "list") {
+    var index = list.findIndex(function (data) {
+      return data.id == id;
+    });
+    $("#song-list ").children().eq(index).remove();
 
-  // console.log(list);
-  if (index == list.length - 1) {
-    $("#now-singing-list .parent-list").eq(index).remove();
+    list.splice(index, 1);
   } else {
-    $("#song-list .parent-list").eq(index).remove();
+    $("#now-singing-list ").children().eq(0).remove();
+    nowSinging.splice(index, 1);
   }
-  list.splice(index, 1);
-  updateList();
 }

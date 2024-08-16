@@ -23,6 +23,9 @@ body {
 .icon-eraser {
   content: url("../assets/eraser-fill.svg");
 }
+.icon-play {
+  content: url("../assets/play-circle-fill.svg");
+}
 
 .s-container {
   width: fit-content;
