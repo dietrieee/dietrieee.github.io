@@ -107,7 +107,8 @@ function addList(data, type) {
     $("#now-singing-list").append(
       `<div class='s-container'> <div class="parent-title-now-singing"><div  class="title-now-singing ">${data.value}</div></div><button onclick="edit(${data.id}, 'now-singing')" class="btn btn-action btn-light  action"> <i class="icon-pencil"></i>
     </button><button onclick="deleteSong(${data.id}, 'now-singing')" class="btn btn-light btn-action  action"> <i class="icon-eraser"></i>
-    </button> </div>`
+    </button><button onclick="drop()" class="btn btn-light btn-action  action"> <i class="icon-drop"></i>
+    </button>  </div>`
     );
   }
   // console.log(_index);
@@ -118,6 +119,12 @@ function addList(data, type) {
     </button><button onclick="play(${data.id})" class="btn btn-action btn-light  action"> <i class="icon-play"></i>
     </button> </div>`);
   }
+}
+
+function drop() {
+  list.push(nowSinging[0]);
+  addList(nowSinging[0], "list");
+  deleteSong(nowSinging[0].id, "now-singing");
 }
 
 function play(id) {
@@ -135,6 +142,7 @@ function play(id) {
 
     $(".title-now-singing").html(nowSinging[0].value);
   }
+  deleteSong(list[index].id, "list");
 }
 
 function edit(id, type) {

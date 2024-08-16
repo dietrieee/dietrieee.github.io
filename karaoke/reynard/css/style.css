@@ -26,7 +26,9 @@ body {
 .icon-play {
   content: url("../assets/play-circle-fill.svg");
 }
-
+.icon-drop {
+  content: url("../assets/arrow-down-circle-line.svg");
+}
 .s-container {
   width: fit-content;
   height: auto;
