@@ -1,0 +1,117 @@
+{
+    "cur": {
+        "label": "Currency",
+        "type": "textfield",
+        "group": "Goal title settings",
+        "value": "$"
+    },
+    "align": {
+        "type": "dropdown",
+        "label": "Goal position",
+        "value": "vertleft",
+        "options": {
+            "hor": "Horizontal",
+            "vert": "Vertical (number on the right)",
+            "vertleft": "Vertical (number on the left)"
+        },
+        "group": "Data"
+    },
+    "titleFontName": {
+        "type": "fontpicker",
+        "label": "Font name",
+        "value": "Quicksand",
+        "group": "Styling"
+    },
+    "titleFontSize": {
+        "type": "slider",
+        "label": "Title font size",
+        "value": 20,
+        "min": 10,
+        "max": 60,
+        "step": 1,
+        "group": "Styling"
+    },
+    "titleFontColor": {
+        "type": "colorpicker",
+        "label": "Text color",
+        "value": "#62627c",
+        "group": "Styling"
+    },
+    "fontColor": {
+        "type": "colorpicker",
+        "label": "Text background color",
+        "value": "#FFFFFF",
+        "group": "Styling"
+    },
+    "fontSize": {
+        "type": "slider",
+        "label": "Goal number font size",
+        "value": 17,
+        "min": 10,
+        "max": 60,
+        "step": 1,
+        "group": "Styling"
+    },
+    "fontWeight": {
+        "label": "Numbers font weight",
+        "type": "dropdown",
+        "options": {
+            "300": "Thin",
+            "400": "Regular",
+            "500": "Medium",
+            "600": "Semibold",
+            "700": "Bold"
+        },
+        "group": "Goal title settings",
+        "value": "700"
+    },
+    "titleFontWeight": {
+        "label": "Title font weight",
+        "type": "dropdown",
+        "options": {
+            "300": "Thin",
+            "400": "Regular",
+            "500": "Medium",
+            "600": "Semibold",
+            "700": "Bold"
+        },
+        "group": "Goal title settings",
+        "value": "700"
+    },
+    "bg1": {
+        "type": "colorpicker",
+        "label": "Background color",
+        "value": "#17204B",
+        "group": "Styling"
+    },
+    "bg2": {
+        "type": "colorpicker",
+        "label": "Background color 2",
+        "value": "#17204B",
+        "group": "Styling"
+    },
+    "border1": {
+        "type": "colorpicker",
+        "label": "Border color",
+        "value": "#EED68F",
+        "group": "Styling"
+    },
+    "butter": {
+        "type": "colorpicker",
+        "label": "Butterfly color",
+        "value": "#FFFFFF",
+        "group": "Styling"
+    },
+    "fillcolor": {
+        "type": "colorpicker",
+        "label": "Progress color",
+        "value": "#28D3FD",
+        "group": "Styling"
+    },
+    "restcolor": {
+        "type": "colorpicker",
+        "label": "Progress Background color",
+        "value": "#21295E",
+        "group": "Styling"
+    }
+}
