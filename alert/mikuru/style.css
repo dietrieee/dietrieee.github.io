@@ -228,7 +228,7 @@ transition: 0.5s;
 }
 
 .vertleft .dot {
- left: -4px;
+ left: -2px;
  position: absolute;
  content: ' ';
  top: 50%;
@@ -366,8 +366,4 @@ transform: translate(-50%, 100%);
  100% { 
    transform: translate3d(85px,0,0);
  }
-}
-/* delete soon */
-body {
- background-color: #000000;
 }
