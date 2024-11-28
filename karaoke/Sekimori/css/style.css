@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap");
 * {
-  font-family: "Baloo 2", sans-serif !important;
+  font-family: "Fredoka", sans-serif;
 }
 body {
   display: flex !important;
@@ -113,6 +113,7 @@ body {
   box-shadow: 0px 0px 12px 2px #6a696a;
   border-radius: 8px;
   padding: 6px 32px;
+  padding-right: 40px;
   overflow: visible;
   z-index: 1 !important;
 }
@@ -200,11 +201,11 @@ body {
   background: rgb(142, 87, 160);
   background: url("../assets/labalaba.png"),
     linear-gradient(90deg, #8c1c32 0%, #48223e 100%);
-  color: white;
+  color: #ca9d67;
   background-position: 200% 70%, center;
   background-size: 80%, 100%;
   background-repeat: no-repeat;
-  border: 2px solid #fff;
+  border: 2px solid #ca9d67;
   box-shadow: 0px 0px 18px 2px #9f9f9f;
   z-index: 9;
   font-family: "Fira Code", monospace !important;
@@ -241,7 +242,7 @@ body {
 }
 
 #asset-parent span {
-  background-image: url("../assets/star.png");
+  background-image: url("../assets/yellow-star.png");
   background-repeat: no-repeat;
   background-size: contain;
   width: 28px;
@@ -251,7 +252,7 @@ body {
 
   z-index: 9999 !important;
   content: " ";
-  margin: 12px;
+  margin: 8px;
 }
 
 #asset-parent span:nth-child(1) {
@@ -295,17 +296,17 @@ body {
   background-color: #48223e;
   padding: 4px 8px;
   border-radius: 6px;
-  color: #fff;
+  color: #ca9d67;
   position: absolute;
   right: 0px;
-  top: -40px;
+  top: -50px;
   width: fit-content;
   height: auto;
   font-size: 18px;
   font-weight: bold !important;
-  border: 2px solid white;
+  border: 2px solid #ca9d67;
   z-index: 9;
-  font-family: "Fira Code", monospace !important;
+  /* font-family: "Fira Code", monospace !important; */
 }
 .container-input {
   width: 400px;
