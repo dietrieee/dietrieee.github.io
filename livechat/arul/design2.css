@@ -1,0 +1,1130 @@
+/*
+
+Made by : Dietrieee
+twitter:  @dietrieee
+
+for Tokki Carotty 
+*/
+
+/* styler */
+/* @import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap'); */
+/* @import url("https://fonts.googleapis.com/css2?family=Fredoka&display=swap"); */
+/* @import url('https://fonts.googleapis.com/css2?family=Monomaniac+One&display=swap'); */
+@import url("https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Monomaniac+One&display=swap");
+
+* {
+  /* font-family: "Fredoka", sans-serif !important; */
+  /* font-family: "Monomaniac One", sans-serif !important ; */
+  font-family: "Afacad Flux", sans-serif;
+}
+
+yt-live-chat-renderer {
+  background-color: transparent !important;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+yt-live-chat-text-message-renderer,
+yt-live-chat-text-message-renderer[is-highlighted] {
+  background-color: transparent !important;
+}
+
+@keyframes snowflake {
+  0% {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes shaking {
+  0% {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(-8deg);
+  }
+
+  75% {
+    transform: rotate(8deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+}
+
+yt-live-chat-text-message-renderer[author-type="member"] #content {
+  border: 3px solid #93b6d4 !important;
+  box-shadow: none !important;
+  /* border-image: linear-gradient(to right, #CB9DE1, #93B6D4) 1 !important ; */
+}
+
+yt-live-chat-text-message-renderer[author-type="member"] #content::after {
+  position: absolute !important;
+  z-index: -1;
+  content: " ";
+  max-width: 100% !important;
+  min-width: 100% !important;
+  min-height: 100% !important;
+  background: rgb(201, 158, 224);
+  background: linear-gradient(
+    225deg,
+    rgba(201, 158, 224, 1) 0%,
+    rgba(147, 182, 212, 1) 53%
+  );
+  bottom: -7px !important;
+  left: 6px;
+  border-radius: 0px 50px 50px 25px;
+}
+
+yt-live-chat-text-message-renderer[author-type="moderator"] #content {
+  box-shadow: 3px 3px 0px 3px #455cba !important;
+  border: 3px solid #455cba !important;
+}
+
+yt-live-chat-text-message-renderer[author-type="owner"] #content {
+  /* border: 3px solid #ffffff; */
+  /* background-color: #1F0937; */
+  border: 3px solid #49318d !important;
+  box-shadow: none !important;
+}
+
+yt-live-chat-text-message-renderer[author-type="owner"] #content::after {
+  position: absolute !important;
+  z-index: -1;
+  content: " ";
+  max-width: 100% !important;
+  min-width: 100% !important;
+  min-height: 100% !important;
+  background: rgb(110, 51, 119);
+  background: linear-gradient(
+    225deg,
+    rgba(110, 51, 119, 1) 0%,
+    rgba(73, 49, 141, 1) 50%,
+    rgba(50, 48, 155, 1) 95%
+  );
+  bottom: -7px !important;
+  left: 6px;
+  border-radius: 0px 50px 50px 25px;
+}
+
+@keyframes swing {
+  0% {
+    /* opacity: 1; */
+    transform: rotate(-5deg);
+  }
+
+  50% {
+    transform: rotate(5deg);
+  }
+
+  100% {
+    transform: rotate(-5deg);
+    /* transform: none; */
+  }
+}
+
+yt-live-chat-text-message-renderer #content {
+  /* background: ;  */
+  max-width: 600px !important;
+  min-width: 300px !important;
+  min-height: 42px !important;
+  color: #202224 !important;
+  border-radius: 0px 50px 50px 25px;
+  box-shadow: 3px 3px 0px 3px #202224 !important;
+  border: 3px solid #202224 !important;
+  /* background-color: rgba(255, 255, 255, 0.8); */
+  background-color: #ffffff;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 12px;
+  padding-bottom: 10px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  margin-left: 40px;
+  margin-right: 8px;
+  position: relative;
+  /* border-bottom-left-radius: 0px; */
+}
+
+/* bintang author */
+
+yt-live-chat-text-message-renderer::before {
+  position: absolute !important;
+  top: 23px;
+  left: 8px;
+  width: 34px;
+  height: auto;
+  animation: shaking 3s infinite;
+  content: url("data:image/svg+xml,%3Csvg viewBox='0 0 58 58' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M57.9063 29.2813C57.9063 29.2813 58.1171 28.9297 57.9063 28.8593L43.7868 24.3581L39.7828 23.0922L44.6298 13.6677C44.6298 13.6677 44.5595 13.3864 44.4191 13.4567L35.0763 18.2393L33.8119 14.2304L29.3161 0.0937753C29.3161 0.0937753 28.9649 -0.117219 28.8946 0.0937753L24.3989 14.2304L23.1344 18.2393L13.7214 13.3864C13.7214 13.3864 13.4405 13.4567 13.5107 13.5974L18.2874 22.9515L14.2834 24.2175L0.0936617 28.7187C0.0936617 28.7187 -0.117077 29.0703 0.0936617 29.1407L14.2132 33.6419L18.2172 34.9078L13.3702 44.3323C13.3702 44.3323 13.4405 44.6136 13.5809 44.5433L22.9237 39.7607L24.1881 43.7696L28.6839 57.9062C28.6839 57.9062 29.0351 58.1172 29.1054 57.9062L33.6011 43.7696L34.8656 39.7607L44.2786 44.6136C44.2786 44.6136 44.5595 44.5433 44.4893 44.4026L39.7126 35.0485L43.7166 33.7825L57.8361 29.2813H57.9063Z' fill='%23202224'/%3E%3C/svg%3E%0A");
+}
+
+yt-live-chat-text-message-renderer[author-type="moderator"]::before {
+  content: url("data:image/svg+xml,%3Csvg viewBox='0 0 58 58' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M57.9063 29.2813C57.9063 29.2813 58.1171 28.9297 57.9063 28.8593L43.7868 24.3581L39.7828 23.0922L44.6298 13.6677C44.6298 13.6677 44.5595 13.3864 44.4191 13.4567L35.0763 18.2393L33.8119 14.2304L29.3161 0.0937753C29.3161 0.0937753 28.9649 -0.117219 28.8946 0.0937753L24.3989 14.2304L23.1344 18.2393L13.7214 13.3864C13.7214 13.3864 13.4405 13.4567 13.5107 13.5974L18.2874 22.9515L14.2834 24.2175L0.0936617 28.7187C0.0936617 28.7187 -0.117077 29.0703 0.0936617 29.1407L14.2132 33.6419L18.2172 34.9078L13.3702 44.3323C13.3702 44.3323 13.4405 44.6136 13.5809 44.5433L22.9237 39.7607L24.1881 43.7696L28.6839 57.9062C28.6839 57.9062 29.0351 58.1172 29.1054 57.9062L33.6011 43.7696L34.8656 39.7607L44.2786 44.6136C44.2786 44.6136 44.5595 44.5433 44.4893 44.4026L39.7126 35.0485L43.7166 33.7825L57.8361 29.2813H57.9063Z' fill='%23455CBA'/%3E%3C/svg%3E%0A");
+}
+
+yt-live-chat-text-message-renderer[author-type="owner"]::before {
+  content: url("data:image/svg+xml,%3Csvg viewBox='0 0 58 58' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M57.9063 29.2813C57.9063 29.2813 58.1171 28.9297 57.9063 28.8593L43.7868 24.3581L39.7828 23.0922L44.6298 13.6677C44.6298 13.6677 44.5595 13.3864 44.4191 13.4567L35.0763 18.2393L33.8119 14.2304L29.3161 0.0937753C29.3161 0.0937753 28.9649 -0.117219 28.8946 0.0937753L24.3989 14.2304L23.1344 18.2393L13.7214 13.3864C13.7214 13.3864 13.4405 13.4567 13.5107 13.5974L18.2874 22.9515L14.2834 24.2175L0.0936617 28.7187C0.0936617 28.7187 -0.117077 29.0703 0.0936617 29.1407L14.2132 33.6419L18.2172 34.9078L13.3702 44.3323C13.3702 44.3323 13.4405 44.6136 13.5809 44.5433L22.9237 39.7607L24.1881 43.7696L28.6839 57.9062C28.6839 57.9062 29.0351 58.1172 29.1054 57.9062L33.6011 43.7696L34.8656 39.7607L44.2786 44.6136C44.2786 44.6136 44.5595 44.5433 44.4893 44.4026L39.7126 35.0485L43.7166 33.7825L57.8361 29.2813H57.9063Z' fill='%236B3379'/%3E%3C/svg%3E%0A");
+}
+
+yt-live-chat-text-message-renderer[author-type="member"]::before {
+  content: url("data:image/svg+xml,%3Csvg viewBox='0 0 58 58' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M57.9063 29.2813C57.9063 29.2813 58.1171 28.9297 57.9063 28.8593L43.7868 24.3581L39.7828 23.0922L44.6298 13.6677C44.6298 13.6677 44.5595 13.3864 44.4191 13.4567L35.0763 18.2393L33.8119 14.2304L29.3161 0.0937753C29.3161 0.0937753 28.9649 -0.117219 28.8946 0.0937753L24.3989 14.2304L23.1344 18.2393L13.7214 13.3864C13.7214 13.3864 13.4405 13.4567 13.5107 13.5974L18.2874 22.9515L14.2834 24.2175L0.0936617 28.7187C0.0936617 28.7187 -0.117077 29.0703 0.0936617 29.1407L14.2132 33.6419L18.2172 34.9078L13.3702 44.3323C13.3702 44.3323 13.4405 44.6136 13.5809 44.5433L22.9237 39.7607L24.1881 43.7696L28.6839 57.9062C28.6839 57.9062 29.0351 58.1172 29.1054 57.9062L33.6011 43.7696L34.8656 39.7607L44.2786 44.6136C44.2786 44.6136 44.5595 44.5433 44.4893 44.4026L39.7126 35.0485L43.7166 33.7825L57.8361 29.2813H57.9063Z' fill='%23C99EE0'/%3E%3C/svg%3E%0A");
+}
+
+/* end bintang author */
+
+@keyframes moveLeftRight {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(3px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* end rantai */
+
+@keyframes bg {
+  from {
+    background-position: 100% 100%;
+    background-size: 0em;
+  }
+
+  to {
+    background-position: 98% 98%;
+    background-size: 15%;
+  }
+}
+
+@keyframes slide {
+  0% {
+    clip-path: circle(2% at 0%);
+  }
+
+  100% {
+    clip-path: circle(100%);
+  }
+}
+
+@keyframes center {
+  0% {
+    clip-path: circle(2% at 0%);
+  }
+
+  100% {
+    clip-path: circle(100%);
+  }
+}
+
+/* yt-live-chat-text-message-renderer #content::after {
+  position: absolute;
+  width: 34px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: auto;
+  right: -10px;
+  top: -20px;
+  z-index: 9999999;
+  transform-origin: center center;
+} */
+
+yt-live-chat-text-message-renderer[author-type="owner"],
+yt-live-chat-text-message-renderer[author-type="owner"][is-highlighted] {
+  background-color: transparent !important;
+}
+
+yt-live-chat-text-message-renderer[author-type="moderator"],
+yt-live-chat-text-message-renderer[author-type="moderator"][is-highlighted] {
+  background-color: transparent !important;
+}
+
+yt-live-chat-text-message-renderer[author-type="member"],
+yt-live-chat-text-message-renderer[author-type="member"][is-highlighted] {
+  background-color: transparent !important;
+}
+
+yt-live-chat-text-message-renderer {
+  width: fit-content;
+  margin-left: 30px;
+
+  /* break-after: always ; */
+  /* background-color: red !important; */
+  /* float: left; */
+  opacity: 1 !important;
+}
+
+@keyframes authorname {
+  0% {
+    /* opacity: 0; */
+    /* transform: translateY(-26px); */
+    /* z-index: -1 !important; */
+    transform: translateY(10px);
+  }
+
+  50% {
+    /* z-index: -1; */
+    transform: translateY(-10px);
+  }
+
+  100% {
+    /* z-index: -1; */
+
+    /* opacity: 1; */
+    transform: none;
+  }
+}
+
+@keyframes slidebottom {
+  0% {
+    clip-path: circle(2% at 0% 0%);
+  }
+
+  100% {
+    clip-path: circle(100%);
+  }
+}
+
+yt-live-chat-author-chip #author-name {
+  animation: authorname 350ms;
+  /* background-color: transparent !important;
+    padding-left: 50px !important; */
+}
+
+/* Outlines */
+yt-live-chat-renderer * {
+  font-size: 24px !important;
+}
+
+yt-live-chat-text-message-renderer #content,
+yt-live-chat-legacy-paid-message-renderer #content {
+  overflow: initial !important;
+}
+
+/* Hide scrollbar. */
+yt-live-chat-item-list-renderer #items {
+  overflow: hidden !important;
+}
+
+yt-live-chat-item-list-renderer {
+  margin-top: 32px !important;
+  /* display: flex; */
+}
+
+yt-live-chat-item-list-renderer #item-scroller {
+  overflow: hidden !important;
+}
+
+/* Hide header and input. */
+yt-live-chat-header-renderer,
+yt-live-chat-message-input-renderer {
+  display: none !important;
+}
+
+@keyframes popout {
+  0% {
+    opacity: 1;
+    transform: translateY(36px);
+    transform: scale(0.35);
+  }
+
+  50% {
+    transform: translateY(-20px) scale(1);
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Reduce side padding. */
+yt-live-chat-text-message-renderer,
+yt-live-chat-legacy-paid-message-renderer {
+  padding-left: 4px !important;
+  padding-right: 4px !important;
+  animation: popout 650ms;
+  animation-fill-mode: both;
+  transform-origin: left bottom;
+}
+
+yt-live-chat-paid-message-renderer #header {
+  padding-left: 4px !important;
+  padding-right: 4px !important;
+}
+
+/* yt-live-chat-text-message-renderer */
+
+/* Avatars. */
+
+yt-live-chat-text-message-renderer #author-photo,
+yt-live-chat-paid-message-renderer #author-photo,
+yt-live-chat-legacy-paid-message-renderer #author-photo {
+  display: none !important;
+}
+
+/* Hide badges. */
+yt-live-chat-text-message-renderer #author-badges {
+  display: none !important;
+  vertical-align: middle !important;
+}
+
+/* Timestamps. */
+yt-live-chat-text-message-renderer #timestamp {
+  display: none !important;
+}
+
+/* Badges. */
+/* yt-live-chat-text-message-renderer #author-name[type="owner"],
+yt-live-chat-text-message-renderer #author-name.owner, */
+yt-live-chat-text-message-renderer
+  yt-live-chat-author-badge-renderer[type="owner"] {
+  display: none;
+}
+
+yt-live-chat-text-message-renderer
+  yt-live-chat-author-badge-renderer[type="moderator"] {
+  font-weight: bold;
+  position: absolute;
+  font-size: 52px;
+  size: 34px;
+  left: -13px;
+  top: 15px;
+  color: #ffffff;
+  /* background: linear-gradient(90deg, #219BEE 0%, #B998F2 100%); */
+  border-radius: 12px;
+  background-color: #01a6ff;
+  border: 1px solid #ffffff;
+  padding: 4px;
+}
+
+yt-live-chat-text-message-renderer
+  yt-live-chat-author-badge-renderer[type="moderator"]
+  yt-icon {
+  width: 14px !important;
+  height: auto !important;
+  z-index: 9 !important;
+}
+
+yt-live-chat-text-message-renderer
+  yt-live-chat-author-badge-renderer[type="member"] {
+  font-weight: bold;
+  position: absolute;
+  font-size: 52px;
+  size: 54px;
+  width: fit-content;
+  right: -10px;
+  bottom: -20px;
+  padding: 2px;
+  border-radius: 18px;
+
+  /* background: linear-gradient(90deg, #B797F2 0%, #EBB6D2 100%); */
+}
+
+yt-live-chat-text-message-renderer
+  yt-live-chat-author-badge-renderer[type="member"]
+  img {
+  width: 36px !important;
+  /* animation: shaking 5s infinite; */
+
+  height: 36px !important;
+}
+
+/* Channel names. */
+yt-live-chat-text-message-renderer #author-name.owner {
+  background: linear-gradient(
+    225deg,
+    rgba(110, 51, 119, 1) 0%,
+    rgba(73, 49, 141, 1) 53%,
+    rgba(50, 48, 155, 1) 100%
+  );
+  /* border: 2px solid #FFFFFF ; */
+  word-break: keep-all !important;
+  width: max-content !important;
+  color: #ffffff !important;
+  border-radius: 50px 50px 50px 0px !important;
+  background-color: transparent !important;
+  margin-left: -20px;
+  /* box-shadow: 0px 0px 0px 4px #9E60D6; */
+  padding-left: 16px !important;
+  padding-right: 16px !important;
+  /* width: 100% !important; */
+}
+
+yt-live-chat-text-message-renderer #author-name.member {
+  background: rgb(201, 158, 224);
+  background: linear-gradient(
+    225deg,
+    rgba(201, 158, 224, 1) 0%,
+    rgba(147, 182, 212, 1) 53%
+  );
+  color: #ffffff !important;
+  border-radius: 50px 50px 50px 0px !important;
+  margin-left: -20px;
+}
+
+yt-live-chat-text-message-renderer #author-name.moderator {
+  background-color: #455cba !important;
+  color: #ffffff !important;
+  border-radius: 50px 50px 50px 0px !important;
+  margin-left: -20px;
+  position: absolute !important;
+  left: 50px;
+}
+
+@keyframes author {
+  0% {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  25% {
+    opacity: 1;
+    transform: translateY(-16px), translateX(-20px);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translateY(16px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+#reaction-control-panel-overlay {
+  display: none !important;
+}
+
+#chat-badges .yt-live-chat-author-chip {
+  display: none !important;
+}
+
+/* viewer name */
+
+yt-live-chat-text-message-renderer #author-name {
+  /* animation: author 550ms; */
+  color: #ffff !important;
+  font-weight: bold !important;
+  /* padding: 6px 12px 2px 16px !important; */
+
+  height: 30px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  max-width: 190px !important;
+
+  padding: 2px 18px 4px 18px;
+  white-space: nowrap !important;
+  /* transform: rotate(-4deg); */
+  border-radius: 50px 50px 50px 0px !important;
+  margin-left: -20px;
+  font-size: 17px !important;
+  top: -40px !important;
+  left: 18px !important;
+  /* margin-top: 32px; */
+  position: absolute;
+  background-color: #202224 !important;
+  /* word-spacing: 6px; */
+  letter-spacing: 2px;
+  /* border: 2px dashed #FFFFFF; */
+  z-index: 1;
+  /* box-shadow: 0px 0px 0px 4px #BE86F1; */
+}
+
+/* Messages. */
+
+yt-live-chat-text-message-renderer[author-type="member"] #message {
+  color: #202224 !important;
+  border: none;
+}
+
+yt-live-chat-text-message-renderer[author-type="member"] #message::after {
+  position: absolute !important ;
+  top: -10px;
+  width: 34px;
+  right: -5px;
+  content: url("data:image/svg+xml,%3Csvg viewBox='0 0 86 86' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M43.1037 76.8616C61.8712 76.8616 77.0853 61.6475 77.0853 42.88C77.0853 24.1125 61.8712 8.89844 43.1037 8.89844C24.3362 8.89844 9.12207 24.1125 9.12207 42.88C9.12207 61.6475 24.3362 76.8616 43.1037 76.8616Z' fill='white'/%3E%3Cpath d='M43.1023 10.3078C61.051 10.3078 75.6722 24.9289 75.6722 42.8776C75.6722 60.8264 61.051 75.4475 43.1023 75.4475C25.1536 75.4475 10.5324 60.8264 10.5324 42.8776C10.5324 24.9289 25.1536 10.3078 43.1023 10.3078ZM43.1023 7.48438C23.5402 7.48438 7.70898 23.3155 7.70898 42.8776C7.70898 62.4397 23.5402 78.2709 43.1023 78.2709C62.6644 78.2709 78.4956 62.4397 78.4956 42.8776C78.4956 23.3155 62.6644 7.48438 43.1023 7.48438Z' fill='%23FCC563'/%3E%3Cpath d='M43.1018 7.49955C62.6638 7.49955 78.495 23.3307 78.495 42.8928C78.495 62.4549 62.6638 78.2861 43.1018 78.2861C23.5397 78.2861 7.70846 62.4549 7.70846 42.8928C7.70846 23.3307 23.5397 7.49955 43.1018 7.49955ZM43.1018 0.390625C19.6575 0.390625 0.599609 19.4485 0.599609 42.8928C0.599609 66.3371 19.6575 85.395 43.1018 85.395C66.546 85.395 85.604 66.3371 85.604 42.8928C85.604 19.4485 66.546 0.390625 43.1018 0.390625Z' fill='%23F09010'/%3E%3Cpath d='M43.1026 42.8848L40.6826 40.4647L50.9678 32.5995L61.2531 24.7344L53.3879 35.0196L45.5227 45.2544L43.1026 42.8848Z' fill='%23171A1C'/%3E%3Cpath d='M43.1 42.8732L45.52 45.2428L35.2852 53.108L25 60.9732L32.8652 50.688L40.6799 40.4531L43.1 42.8732Z' fill='%23171A1C'/%3E%3Cpath d='M43.1006 42.8959V40.375L52.4783 41.6354L61.9064 42.8959L52.4783 44.1059L43.1006 45.3663V42.8959Z' fill='%23454F54'/%3E%3Cpath d='M43.1011 42.8959V45.3663L33.7234 44.1059L24.3457 42.8959L33.7234 41.6354L43.1011 40.375V42.8959Z' fill='%23454F54'/%3E%3Cpath d='M43.0994 42.8594H45.6203L44.3598 52.2371L43.0994 61.6148L41.8894 52.2371L40.6289 42.8594H43.0994Z' fill='%23222628'/%3E%3Cpath d='M43.0994 42.8762H40.6289L41.8894 33.448L43.0994 24.0703L44.3598 33.448L45.6203 42.8762H43.0994Z' fill='%23222628'/%3E%3Cpath d='M43.101 42.8799L40.2272 45.7033L30.9503 33.5527L21.623 21.3516L33.7737 30.6788L45.9748 40.0061L43.101 42.8799Z' fill='%23DD2E44'/%3E%3Cpath d='M43.1033 42.8972L45.9771 40.0234L55.3044 52.1741L64.6317 64.3752L52.4306 55.0479L40.2295 45.7206L43.1033 42.8972Z' fill='%23171A1C'/%3E%3Cpath d='M46.881 39.0391H39.3184V46.6017H46.881V39.0391Z' fill='white'/%3E%3C/svg%3E%0A");
+}
+
+yt-live-chat-text-message-renderer[author-type="moderator"] #message {
+  color: #202224 !important;
+}
+
+yt-live-chat-text-message-renderer[author-type="moderator"] #message::after {
+  width: 20px;
+  position: absolute !important ;
+  top: -10px;
+  width: 34px;
+  right: -5px;
+  content: url("data:image/svg+xml,%3Csvg viewBox='0 0 89 89' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.702148 88.0852L47.9436 40.8438L55.1534 48.0535C55.1534 48.0535 27.9277 86.371 0.702148 88.0852Z' fill='%239AAAB4'/%3E%3Cpath d='M0.702148 88.084L47.9436 40.8426L40.7339 33.6328C40.7339 33.6328 2.41635 60.8584 0.702148 88.084Z' fill='%23CCD6DD'/%3E%3Cpath d='M63.5236 45.8016C63.1707 45.8016 62.8178 45.8016 62.4648 45.9024L43.2052 26.6428C43.4069 26.0378 43.5077 25.4328 43.5077 24.7774C43.5077 21.1473 40.5835 18.2734 37.0039 18.2734C33.4242 18.2734 30.5 21.1977 30.5 24.7774C30.5 28.357 33.4242 31.2812 37.0039 31.2812C37.4576 31.2812 37.9114 31.2812 38.3147 31.13L57.4231 50.2384C57.2214 50.8938 57.0701 51.5996 57.0701 52.3054C57.0701 55.9355 59.9944 58.8094 63.574 58.8094C67.1537 58.8094 70.0779 55.8851 70.0779 52.3054C70.0779 48.7258 67.1537 45.8016 63.574 45.8016H63.5236Z' fill='%23FFAC33'/%3E%3Cpath d='M37.0057 28.8005C39.2611 28.8005 41.0895 26.9721 41.0895 24.7166C41.0895 22.4612 39.2611 20.6328 37.0057 20.6328C34.7503 20.6328 32.9219 22.4612 32.9219 24.7166C32.9219 26.9721 34.7503 28.8005 37.0057 28.8005Z' fill='%23FFCC4D'/%3E%3Cpath d='M63.5741 56.5349C65.8295 56.5349 67.6579 54.7065 67.6579 52.451C67.6579 50.1956 65.8295 48.3672 63.5741 48.3672C61.3186 48.3672 59.4902 50.1956 59.4902 52.451C59.4902 54.7065 61.3186 56.5349 63.5741 56.5349Z' fill='%23FFCC4D'/%3E%3Cpath d='M63.2445 14.485L47.2373 30.4922L58.2891 41.5439L74.2963 25.5367L63.2445 14.485Z' fill='%23D99E82'/%3E%3Cpath d='M74.2608 25.5943L72.6979 27.1573L53.1357 24.838L53.1862 24.5859L57.5221 20.25L70.4291 21.7625L74.2608 25.5943Z' fill='%23C1694F'/%3E%3Cpath d='M68.0094 31.8384L63.4718 36.376L51.6741 34.9643L47.2373 30.5276L48.2961 29.4688L68.0094 31.8384Z' fill='%23C1694F'/%3E%3Cpath d='M59.2909 40.549L58.2825 41.5573L56.9717 40.2969L59.2909 40.549Z' fill='%23C1694F'/%3E%3Cpath d='M79.3551 23.7403L65.0365 9.42158C64.0785 8.46364 62.566 8.46364 61.6081 9.42158C60.6502 10.3795 60.6502 11.8921 61.6081 12.85L75.9267 27.1687C76.8847 28.1266 78.3972 28.1266 79.3551 27.1687C80.313 26.2107 80.313 24.6982 79.3551 23.7403Z' fill='%23FFAC33'/%3E%3Cpath d='M80.9316 5.13372L83.641 7.84315C86.4931 10.6952 86.4574 15.2942 83.641 18.1106L78.6856 23.066L65.7087 10.0892L70.6641 5.13372C73.5162 2.28166 78.1152 2.31731 80.9316 5.13372Z' fill='%23894D39'/%3E%3C/svg%3E%0A");
+}
+
+yt-live-chat-text-message-renderer[author-type="owner"] #message {
+  color: #202224 !important;
+}
+yt-live-chat-text-message-renderer[author-type="owner"] #message::after {
+  position: absolute !important ;
+  top: -10px;
+  width: 34px;
+  right: -5px;
+  content: url("data:image/svg+xml,%3Csvg viewBox='0 0 87 87' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M18.249 18.4922L43.4579 43.6002L30.7526 42.9952L18.249 18.4922Z' fill='%2346E0FF'/%3E%3Cpath d='M18.3477 18.6875L43.4558 43.5938L43.7583 31.1406L18.3477 18.6875Z' fill='%23F4BBF2'/%3E%3Cpath d='M68.1123 18.6875L43.458 43.5938L43.7605 31.1406L68.1123 18.6875Z' fill='%2346E0FF'/%3E%3Cpath d='M68.1139 18.6875L43.4092 43.6443L55.6607 43.0392L68.1139 18.6875Z' fill='%23FEE7FB'/%3E%3Cpath d='M68.1139 68.5001L43.4092 43.6441L55.6607 43.0391L68.1139 68.5001Z' fill='%2346E0FF'/%3E%3Cpath d='M68.1139 68.52L43.4092 43.6641L43.7118 56.0668L68.1139 68.52Z' fill='%23F4BBF2'/%3E%3Cpath d='M18.2988 68.52L43.4069 43.6641L43.7094 56.0668L18.2988 68.52Z' fill='%2346E0FF'/%3E%3Cpath d='M18.2988 68.5036L43.4573 43.5972L30.752 42.9922L18.2988 68.5036Z' fill='%23FEE7FB'/%3E%3Cpath d='M0.149414 43.3665L43.5087 43.2656L32.0134 53.6517L0.149414 43.3665Z' fill='%2346E0FF'/%3E%3Cpath d='M0.400391 43.4235L43.5076 43.2723L33.0712 32.2812L0.400391 43.4235Z' fill='%23F4BBF2'/%3E%3Cpath d='M43.308 0.53125L43.5097 43.2855L33.0732 32.2945L43.308 0.53125Z' fill='%2346E0FF'/%3E%3Cpath d='M43.3057 0.53125L43.5073 43.3864L53.5405 32.2945L43.3057 0.53125Z' fill='%23FEE7FB'/%3E%3Cpath d='M86.2611 43.5244L43.5068 43.3731L53.54 32.2812L86.2611 43.5244Z' fill='%2346E0FF'/%3E%3Cpath d='M86.2611 43.5341L43.5068 43.3828L54.4475 53.8193L86.2611 43.5341Z' fill='%23F4BBF2'/%3E%3Cpath d='M43.3057 86.4396L43.5073 43.3828L54.4479 53.8193L43.3057 86.4396Z' fill='%2346E0FF'/%3E%3Cpath d='M43.3083 86.4232L43.5099 43.2656L32.0146 53.6517L43.3083 86.4232Z' fill='%23FEE7FB'/%3E%3C/svg%3E%0A");
+}
+
+yt-live-chat-text-message-renderer #message {
+  color: #02291a !important;
+  font-weight: bold !important;
+  text-align: left !important;
+  font-size: 26px !important;
+  line-height: normal !important;
+  text-indent: 0% !important;
+  word-wrap: break-word;
+  white-space: -moz-pre-wrap;
+  white-space: pre-wrap;
+  overflow: hidden !important;
+  /* transform: skewX(-20deg); */
+}
+
+/* icon gost */
+
+yt-live-chat-text-message-renderer #message::after {
+  position: absolute !important;
+  top: -10px;
+  width: 34px;
+  right: -5px;
+  animation: shaking 3s infinite;
+}
+
+yt-live-chat-text-message-renderer #message::after {
+  content: url("data:image/svg+xml,%3Csvg viewBox='0 0 86 79' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M85.4019 40.1308C85.654 40.03 85.654 39.6771 85.4019 39.5763L66.7977 33.627L60.9997 31.7615C58.4284 30.9548 56.3613 28.8877 55.5546 26.3164L53.6387 20.3167L47.6894 1.7125C47.5886 1.46042 47.2357 1.46042 47.1348 1.7125L41.1855 20.3167L39.32 26.1147C38.5134 28.686 36.4462 30.7531 33.8749 31.5598L27.8752 33.4757L9.2711 39.425C9.01901 39.5258 9.01901 39.8788 9.2711 39.9796L27.8752 45.9289L33.6733 47.7943C36.2446 48.601 38.3117 50.6682 39.1184 53.2395L41.0342 59.2392L46.9836 77.8433C47.0844 78.0954 47.4373 78.0954 47.5382 77.8433L53.4874 59.2392L55.3529 53.4411C56.1596 50.8698 58.2267 48.8027 60.798 47.996L66.7977 46.0801L85.4019 40.1308Z' fill='%23FFAC33'/%3E%3Cpath d='M25.7611 13.6989C25.7611 13.6989 25.862 13.5477 25.7611 13.4973L19.6101 11.531L17.6943 10.926C16.8372 10.6739 16.1818 9.96803 15.8793 9.11093L15.2238 7.09422L13.2575 0.943253C13.2575 0.943253 13.1063 0.842418 13.0559 0.943253L11.0895 7.09422L10.4845 9.01009C10.2325 9.8672 9.5266 10.5226 8.6695 10.8251L6.65282 11.4806L0.501847 13.4469C0.501847 13.4469 0.401012 13.5981 0.501847 13.6485L6.65282 15.6148L8.56864 16.2198C9.42575 16.4719 10.0812 17.1778 10.3837 18.0349L11.0391 20.0516L13.0054 26.2026C13.0054 26.2026 13.1567 26.3034 13.2071 26.2026L15.1734 20.0516L15.7784 18.1357C16.0305 17.2786 16.7364 16.6232 17.5935 16.3207L19.6101 15.6652L25.7611 13.6989Z' fill='%23FFCC4D'/%3E%3Cpath d='M35.9428 66.0818C35.9428 66.0818 36.0436 65.9305 35.9428 65.8801L29.7918 63.9138L27.8759 63.3088C27.0188 63.0567 26.3634 62.3509 26.0608 61.4937L25.4055 59.477L23.4392 53.3261C23.4392 53.3261 23.2879 53.2252 23.2375 53.3261L21.2712 59.477L20.6662 61.3929C20.4141 62.25 19.7082 62.9054 18.8511 63.208L16.8345 63.8634L10.6835 65.8297C10.6835 65.8297 10.5827 65.9809 10.6835 66.0313L16.8345 67.9976L18.7503 68.6027C19.6074 68.8547 20.2628 69.5606 20.5653 70.4177L21.2208 72.4344L23.1871 78.5854C23.1871 78.5854 23.3383 78.6862 23.3887 78.5854L25.355 72.4344L25.9601 70.5185C26.2122 69.6614 26.918 69.006 27.7751 68.7035L29.7918 68.0481L35.9428 66.0818Z' fill='%23FFCC4D'/%3E%3C/svg%3E%0A");
+}
+
+/* bg bintang */
+
+/* ------------------------- Superchat Start ------------------------- */
+
+yt-live-chat-text-message-renderer[is-deleted],
+yt-live-chat-legacy-paid-message-renderer[is-deleted],
+yt-live-chat-action-panel-renderer,
+yt-live-chat-renderer #action-panel,
+yt-live-chat-ticker-renderer,
+yt-live-chat-mode-change-message-renderer,
+yt-live-chat-viewer-engagement-message-renderer,
+yt-live-chat-restricted-participation-renderer,
+yt-live-chat-banner-manager {
+  display: none !important;
+}
+
+/* Superchat's Card */
+yt-live-chat-paid-message-renderer {
+  width: 500px !important;
+}
+/* rantai */
+
+#card.yt-live-chat-paid-message-renderer::after {
+  position: absolute;
+  right: 100px;
+  bottom: -55px;
+  width: 25px;
+  height: auto;
+  z-index: 1;
+  content: url("");
+}
+
+/* bg bintang */
+
+#card.yt-live-chat-paid-message-renderer::before {
+  position: absolute !important;
+  bottom: 0px;
+  width: inherit;
+  height: 100%;
+  content: " ";
+  right: -10px;
+  z-index: -10;
+  opacity: 30%;
+  /* background-color: red; */
+  background-position: 100% calc(20% + 10px);
+  background-repeat: no-repeat;
+  background-size: 30%;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 119 119' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M25.0059 24.7266L59.8156 59.3923L42.3118 58.5468L25.0059 24.7266Z' fill='%2346E0FF'/%3E%3Cpath d='M25.168 25.0391L59.8158 59.399L60.2835 42.219L25.168 25.0391Z' fill='%23F4BBF2'/%3E%3Cpath d='M93.8866 25.0391L59.8145 59.399L60.2821 42.219L93.8866 25.0391Z' fill='%2346E0FF'/%3E%3Cpath d='M93.8873 25.0391L59.7432 59.471L76.7073 58.6435L93.8873 25.0391Z' fill='%23FEE7FB'/%3E%3Cpath d='M93.8513 93.8281L59.7432 59.4681L76.7073 58.6406L93.8513 93.8281Z' fill='%2346E0FF'/%3E%3Cpath d='M93.8513 93.8287L59.7432 59.4688L60.1569 76.5947L93.8513 93.8287Z' fill='%23F4BBF2'/%3E%3Cpath d='M25.1318 93.7927L59.7436 59.4688L60.1574 76.5947L25.1318 93.7927Z' fill='%2346E0FF'/%3E%3Cpath d='M25.1318 93.7805L59.8156 59.3846L42.3118 58.5391L25.1318 93.7805Z' fill='%23FEE7FB'/%3E%3Cpath d='M0 59.1103L59.8691 58.9844L44.0563 73.358L0 59.1103Z' fill='%2346E0FF'/%3E%3Cpath d='M0.395508 59.242L59.8688 58.9902L45.4772 43.7891L0.395508 59.242Z' fill='%23F4BBF2'/%3E%3Cpath d='M59.6353 0L59.8691 58.9876L45.4775 43.7865L59.6353 0Z' fill='%2346E0FF'/%3E%3Cpath d='M59.6357 0L59.8696 59.1135L73.7935 43.7865L59.6357 0Z' fill='%23FEE7FB'/%3E%3Cpath d='M118.893 59.332L59.8691 59.1161L73.793 43.7891L118.893 59.332Z' fill='%2346E0FF'/%3E%3Cpath d='M118.893 59.3252L59.8691 59.1094L74.9983 73.519L118.893 59.3252Z' fill='%23F4BBF2'/%3E%3Cpath d='M59.6357 118.547L59.8696 59.1094L74.9988 73.519L59.6357 118.547Z' fill='%2346E0FF'/%3E%3Cpath d='M59.6356 118.548L59.8694 58.9844L44.0566 73.358L59.6356 118.548Z' fill='%23FEE7FB'/%3E%3C/svg%3E%0A");
+}
+
+#card.yt-live-chat-paid-message-renderer {
+  /* border-radius: 4px; */
+  overflow: hidden;
+
+  min-height: 80px;
+  /* flex-direction: column; */
+  background: rgb(105, 51, 123);
+  background: linear-gradient(
+    90deg,
+    rgba(105, 51, 123, 1) 0%,
+    rgba(57, 49, 152, 1) 50%
+  );
+  width: 100% !important;
+  height: fit-content;
+  /* overflow: hidden; */
+  animation: popout 0.6s;
+  transform-origin: bottom left;
+  animation-fill-mode: both;
+  border-radius: 0px 50px 50px 25px;
+  box-shadow: 4px 4px 0px 4px #69337b !important;
+  border: 3px solid #69337b;
+  /* background-color: transparent !important; */
+  /* border: 6px solid #15131E; */
+  padding: 0px 30px 0px 30px;
+  margin-left: 50px !important;
+  margin-top: 40px !important;
+  margin-bottom: 20px;
+  /* position: relative !important; */
+  /* border-bottom-left-radius: 0px; */
+  /* box-shadow: 0px 0px 0px 4px #DDCEE5 !important; */
+
+  /* transform: scale(1.2) !important; */
+}
+
+/* Superchat's Author Photo */
+yt-live-chat-paid-message-renderer #author-photo,
+yt-live-chat-legacy-paid-message-renderer #author-photo {
+  display: none !important;
+  overflow: hidden;
+  border-radius: 50%;
+  flex: none;
+  width: 60px !important;
+  height: 40px;
+  margin: 20px !important;
+}
+
+yt-live-chat-paid-message-renderer #author-name,
+yt-live-chat-legacy-paid-message-renderer #event-text,
+yt-live-chat-legacy-paid-message-renderer #event-text * {
+  color: #ffe78f !important;
+  /* font-family: 'Lexend Deca', sans-serif !important; */
+  /* margin-top: 4px; */
+  /* font-size: 20px !important; */
+  line-height: normal !important;
+  /* margin-top: auto; */
+  /* margin-bottom: 12px !important; */
+  font-size: 32px !important;
+  font-weight: bold !important;
+  /* margin-bottom: 5px; */
+  margin-left: 24px;
+  animation: none !important;
+}
+
+yt-live-chat-paid-message-renderer #author-name-chip {
+  margin-top: 0px;
+}
+
+yt-live-chat-paid-message-renderer #purchase-amount,
+yt-live-chat-legacy-paid-message-renderer #purchase-amount,
+yt-live-chat-paid-message-renderer #purchase-amount *,
+yt-live-chat-legacy-paid-message-renderer #detail-text,
+yt-live-chat-legacy-paid-message-renderer #detail-text * {
+  color: #6509a8 !important;
+  background-color: #ffe78f;
+  /* text-align: center !important; */
+  /* margin-left: 15px !important; */
+  margin-right: auto !important;
+  border-radius: 50px;
+  /* font-size: 18px !important; */
+  /* line-height: 18px !important; */
+  font-size: 28px !important;
+  /* margin-top: 8px; */
+  padding-left: 15px;
+  padding-right: 15px;
+  /* margin-bottom: 4px; */
+  font-weight: bold !important;
+  /* font-family: 'Lexend Deca', sans-serif !important; */
+}
+
+yt-live-chat-paid-message-renderer #purchase-amount {
+  background-color: transparent;
+  border-radius: 38px;
+  padding: 12px;
+  padding-right: 20px;
+  color: #ffffff !important;
+}
+
+.yt-live-chat-paid-message-renderer #header #single-line {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0px !important;
+  margin-top: 14px !important;
+  height: 40px;
+}
+
+yt-live-chat-legacy-paid-message-renderer #header,
+yt-live-chat-paid-message-renderer #header {
+  /* font-weight: bold !important; */
+  /* background-color: #EDCD71 !important; */
+  /* margin-left: auto; */
+  width: auto !important;
+  display: flex !important;
+  /* flex-direction: column !important; */
+  /* align-items: center; */
+  justify-content: end !important;
+  padding: 0px !important;
+
+  border-radius: 5px 15px 5px 15px !important;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  position: relative;
+  top: -10px;
+  overflow: visible !important;
+}
+
+/* icon gost */
+
+yt-live-chat-paid-message-renderer #header::before {
+  position: absolute !important;
+  top: 15px;
+  width: 34px;
+  right: -10px;
+  z-index: 2;
+  content: url("");
+}
+
+/* siku */
+
+yt-live-chat-paid-message-renderer #header::after {
+  position: absolute;
+  left: 5px;
+  top: 15px;
+  width: 25px;
+  height: auto;
+  z-index: 1;
+  content: url("");
+}
+
+/* bintang putih */
+
+yt-live-chat-paid-message-renderer #header-content::after {
+  position: absolute !important;
+  left: -5px;
+  top: 40px;
+  width: 34px;
+  content: url("data:image/svg+xml,%3Csvg  viewBox='0 0 88 86' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M38.5974 21.0726C38.7167 21.0398 38.7167 20.8866 38.5974 20.8538L30.4052 18.4468L27.8653 17.7029C26.7206 17.3637 25.8262 16.5432 25.4685 15.5038L24.6218 13.0749L21.9984 5.55862C21.9627 5.44921 21.7957 5.44921 21.76 5.55862L19.1366 13.0749L18.3257 15.4053C17.956 16.4556 17.0617 17.2762 15.9288 17.6044L13.2816 18.3812L5.08943 20.7882C4.97019 20.821 4.97019 20.9742 5.08943 21.007L13.2816 23.414L15.8215 24.1579C16.9663 24.4971 17.8606 25.3177 18.2184 26.357L19.065 28.7859L21.6884 36.3022C21.7242 36.4116 21.8911 36.4116 21.9269 36.3022L24.5503 28.7859L25.3612 26.4555C25.7308 25.4052 26.6252 24.5846 27.758 24.2564L30.4052 23.4796L38.5974 21.0726Z' fill='%23FFE78F'/%3E%3Cg filter='url(%23filter0_f_4901_237)'%3E%3Cpath d='M38.5974 21.0726C38.7167 21.0398 38.7167 20.8866 38.5974 20.8538L30.4052 18.4468L27.8653 17.7029C26.7206 17.3637 25.8262 16.5432 25.4685 15.5038L24.6218 13.0749L21.9984 5.55862C21.9627 5.44921 21.7957 5.44921 21.76 5.55862L19.1366 13.0749L18.3257 15.4053C17.956 16.4556 17.0617 17.2762 15.9288 17.6044L13.2816 18.3812L5.08943 20.7882C4.97019 20.821 4.97019 20.9742 5.08943 21.007L13.2816 23.414L15.8215 24.1579C16.9663 24.4971 17.8606 25.3177 18.2184 26.357L19.065 28.7859L21.6884 36.3022C21.7242 36.4116 21.8911 36.4116 21.9269 36.3022L24.5503 28.7859L25.3612 26.4555C25.7308 25.4052 26.6252 24.5846 27.758 24.2564L30.4052 23.4796L38.5974 21.0726Z' fill='%23FFE78F'/%3E%3C/g%3E%3Cpath d='M45.2769 68.5094C45.3673 68.4845 45.3673 68.3683 45.2769 68.3434L39.063 66.5177L37.1365 65.9534C36.2682 65.6962 35.5898 65.0738 35.3185 64.2854L34.6763 62.4431L32.6864 56.7419C32.6593 56.6589 32.5327 56.6589 32.5055 56.7419L30.5156 62.4431L29.9006 64.2107C29.6202 65.0074 28.9418 65.6298 28.0826 65.8787L26.0746 66.468L19.8608 68.2937C19.7704 68.3186 19.7704 68.4347 19.8608 68.4596L26.0746 70.2853L28.0012 70.8496C28.8695 71.1069 29.5478 71.7293 29.8192 72.5177L30.4614 74.36L32.4512 80.0612C32.4784 80.1441 32.605 80.1441 32.6321 80.0612L34.622 74.36L35.2371 72.5924C35.5175 71.7957 36.1958 71.1733 37.0551 70.9243L39.063 70.3351L45.2769 68.5094Z' fill='%23FFE78F'/%3E%3Cg filter='url(%23filter1_f_4901_237)'%3E%3Cpath d='M45.2769 68.5094C45.3673 68.4845 45.3673 68.3683 45.2769 68.3434L39.063 66.5177L37.1365 65.9534C36.2682 65.6962 35.5898 65.0738 35.3185 64.2854L34.6763 62.4431L32.6864 56.7419C32.6593 56.6589 32.5327 56.6589 32.5055 56.7419L30.5156 62.4431L29.9006 64.2107C29.6202 65.0074 28.9418 65.6298 28.0826 65.8787L26.0746 66.468L19.8608 68.2937C19.7704 68.3186 19.7704 68.4347 19.8608 68.4596L26.0746 70.2853L28.0012 70.8496C28.8695 71.1069 29.5478 71.7293 29.8192 72.5177L30.4614 74.36L32.4512 80.0612C32.4784 80.1441 32.605 80.1441 32.6321 80.0612L34.622 74.36L35.2371 72.5924C35.5175 71.7957 36.1958 71.1733 37.0551 70.9243L39.063 70.3351L45.2769 68.5094Z' fill='%23FFE78F'/%3E%3C/g%3E%3Cpath d='M82.8665 41.1607C83.045 41.1115 83.045 40.8822 82.8665 40.8331L70.6024 37.2297L66.8 36.1159C65.0862 35.6082 63.7473 34.3798 63.2118 32.8238L61.9443 29.1877L58.0169 17.9353C57.9634 17.7716 57.7134 17.7716 57.6599 17.9353L53.7325 29.1877L52.5186 32.6764C51.9652 34.2488 50.6263 35.4772 48.9304 35.9685L44.9673 37.1314L32.7032 40.7348C32.5247 40.7839 32.5247 41.0133 32.7032 41.0624L44.9673 44.6658L48.7697 45.7795C50.4835 46.2873 51.8224 47.5157 52.3579 49.0717L53.6254 52.7078L57.5528 63.9601C57.6063 64.1239 57.8563 64.1239 57.9098 63.9601L61.8372 52.7078L63.0511 49.2191C63.6045 47.6467 64.9434 46.4183 66.6393 45.9269L70.6024 44.764L82.8665 41.1607Z' fill='%23FFE78F'/%3E%3Cg filter='url(%23filter2_f_4901_237)'%3E%3Cpath d='M82.8665 41.1607C83.045 41.1115 83.045 40.8822 82.8665 40.8331L70.6024 37.2297L66.8 36.1159C65.0862 35.6082 63.7473 34.3798 63.2118 32.8238L61.9443 29.1877L58.0169 17.9353C57.9634 17.7716 57.7134 17.7716 57.6599 17.9353L53.7325 29.1877L52.5186 32.6764C51.9652 34.2488 50.6263 35.4772 48.9304 35.9685L44.9673 37.1314L32.7032 40.7348C32.5247 40.7839 32.5247 41.0133 32.7032 41.0624L44.9673 44.6658L48.7697 45.7795C50.4835 46.2873 51.8224 47.5157 52.3579 49.0717L53.6254 52.7078L57.5528 63.9601C57.6063 64.1239 57.8563 64.1239 57.9098 63.9601L61.8372 52.7078L63.0511 49.2191C63.6045 47.6467 64.9434 46.4183 66.6393 45.9269L70.6024 44.764L82.8665 41.1607Z' fill='%23FFE78F'/%3E%3C/g%3E%3Cdefs%3E%3Cfilter id='filter0_f_4901_237' x='0' y='0.476562' width='43.6865' height='40.9062' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3E%3CfeGaussianBlur stdDeviation='2.5' result='effect1_foregroundBlur_4901_237'/%3E%3C/filter%3E%3Cfilter id='filter1_f_4901_237' x='14.793' y='51.6797' width='35.5518' height='33.4453' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3E%3CfeGaussianBlur stdDeviation='2.5' result='effect1_foregroundBlur_4901_237'/%3E%3C/filter%3E%3Cfilter id='filter2_f_4901_237' x='27.5693' y='12.8125' width='60.4307' height='56.2734' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3E%3CfeGaussianBlur stdDeviation='2.5' result='effect1_foregroundBlur_4901_237'/%3E%3C/filter%3E%3C/defs%3E%3C/svg%3E%0A");
+}
+
+yt-live-chat-legacy-paid-message-renderer #header-content,
+yt-live-chat-paid-message-renderer #header-content {
+  /* width: 450px; */
+  /* text-align: center !important; */
+  /* width: 100% !important; */
+  /* display: flex; */
+  /* flex-direction: column; */
+  background-color: transparent !important;
+  align-items: center !important;
+  justify-items: space-between;
+  overflow: visible;
+  padding: 0px 10px;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  /* opa */
+}
+
+/* ------------------------------- Superchat's Content Start -------------------------------  */
+ytd-sponsorships-live-chat-gift-purchase-announcement-renderer {
+  display: none !important;
+}
+
+ytd-sponsorships-live-chat-gift-redemption-announcement-renderer {
+  display: none !important;
+}
+
+ytd-sponsorships-live-chat-gift-redemption-announcement-renderer {
+  display: none !important;
+}
+
+#menu {
+  display: none !important;
+}
+
+yt-live-chat-legacy-paid-message-renderer #content,
+.yt-live-chat-paid-message-renderer #content {
+  background-color: transparent !important;
+}
+
+/* Simbol Hati */
+
+/* ------------------------------- Superchat's Content End -------------------------------  */
+
+/* ------------------- Superchat's Message Start ------------------- */
+
+yt-live-chat-legacy-paid-message-renderer #message,
+yt-live-chat-paid-message-renderer #message {
+  text-align: left !important;
+  /* font-family: 'Kalam', cursive !important; */
+  /* border-radius: 12px; */
+  /* font-family: 'Lexend Deca', sans-serif !important; */
+  font-weight: bolder !important;
+  color: #ffffff !important;
+  font-size: 1.5em !important;
+  line-height: normal !important;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+yt-live-chat-paid-message-renderer #action-buttons {
+  display: none;
+}
+
+/* Icon in superchat's message */
+yt-live-chat-paid-message-renderer #message > img {
+  width: 30px !important;
+  height: 30px !important;
+}
+
+/* ------------------- Superchat's  Message End ------------------- */
+
+/* batas */
+yt-live-chat-membership-item-renderer {
+  animation: popout 600ms;
+  transform-origin: left bottom;
+  width: fit-content !important;
+  overflow: hidden !important;
+  /* padding: 20px; */
+}
+
+/* ramtai */
+
+yt-live-chat-membership-item-renderer::before {
+  position: absolute !important;
+  width: 38px;
+  top: 0px;
+  left: 50px;
+  content: url("data:image/svg+xml,%3Csvg viewBox='0 0 86 86' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M43.1037 76.8616C61.8712 76.8616 77.0853 61.6475 77.0853 42.88C77.0853 24.1125 61.8712 8.89844 43.1037 8.89844C24.3362 8.89844 9.12207 24.1125 9.12207 42.88C9.12207 61.6475 24.3362 76.8616 43.1037 76.8616Z' fill='white'/%3E%3Cpath d='M43.1023 10.3078C61.051 10.3078 75.6722 24.9289 75.6722 42.8776C75.6722 60.8264 61.051 75.4475 43.1023 75.4475C25.1536 75.4475 10.5324 60.8264 10.5324 42.8776C10.5324 24.9289 25.1536 10.3078 43.1023 10.3078ZM43.1023 7.48438C23.5402 7.48438 7.70898 23.3155 7.70898 42.8776C7.70898 62.4397 23.5402 78.2709 43.1023 78.2709C62.6644 78.2709 78.4956 62.4397 78.4956 42.8776C78.4956 23.3155 62.6644 7.48438 43.1023 7.48438Z' fill='%23FCC563'/%3E%3Cpath d='M43.1018 7.49955C62.6638 7.49955 78.495 23.3307 78.495 42.8928C78.495 62.4549 62.6638 78.2861 43.1018 78.2861C23.5397 78.2861 7.70846 62.4549 7.70846 42.8928C7.70846 23.3307 23.5397 7.49955 43.1018 7.49955ZM43.1018 0.390625C19.6575 0.390625 0.599609 19.4485 0.599609 42.8928C0.599609 66.3371 19.6575 85.395 43.1018 85.395C66.546 85.395 85.604 66.3371 85.604 42.8928C85.604 19.4485 66.546 0.390625 43.1018 0.390625Z' fill='%23F09010'/%3E%3Cpath d='M43.1026 42.8848L40.6826 40.4647L50.9678 32.5995L61.2531 24.7344L53.3879 35.0196L45.5227 45.2544L43.1026 42.8848Z' fill='%23171A1C'/%3E%3Cpath d='M43.1 42.8732L45.52 45.2428L35.2852 53.108L25 60.9732L32.8652 50.688L40.6799 40.4531L43.1 42.8732Z' fill='%23171A1C'/%3E%3Cpath d='M43.1006 42.8959V40.375L52.4783 41.6354L61.9064 42.8959L52.4783 44.1059L43.1006 45.3663V42.8959Z' fill='%23454F54'/%3E%3Cpath d='M43.1011 42.8959V45.3663L33.7234 44.1059L24.3457 42.8959L33.7234 41.6354L43.1011 40.375V42.8959Z' fill='%23454F54'/%3E%3Cpath d='M43.0994 42.8594H45.6203L44.3598 52.2371L43.0994 61.6148L41.8894 52.2371L40.6289 42.8594H43.0994Z' fill='%23222628'/%3E%3Cpath d='M43.0994 42.8762H40.6289L41.8894 33.448L43.0994 24.0703L44.3598 33.448L45.6203 42.8762H43.0994Z' fill='%23222628'/%3E%3Cpath d='M43.101 42.8799L40.2272 45.7033L30.9503 33.5527L21.623 21.3516L33.7737 30.6788L45.9748 40.0061L43.101 42.8799Z' fill='%23DD2E44'/%3E%3Cpath d='M43.1033 42.8972L45.9771 40.0234L55.3044 52.1741L64.6317 64.3752L52.4306 55.0479L40.2295 45.7206L43.1033 42.8972Z' fill='%23171A1C'/%3E%3Cpath d='M46.881 39.0391H39.3184V46.6017H46.881V39.0391Z' fill='white'/%3E%3C/svg%3E%0A");
+}
+
+#card.yt-live-chat-membership-item-renderer {
+  font-size: 26px;
+  background: rgb(105, 51, 123);
+  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 119 119' opacity='20%' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M25.0059 24.7266L59.8156 59.3923L42.3118 58.5468L25.0059 24.7266Z' fill='%2346E0FF'/%3E%3Cpath d='M25.168 25.0391L59.8158 59.399L60.2835 42.219L25.168 25.0391Z' fill='%23F4BBF2'/%3E%3Cpath d='M93.8866 25.0391L59.8145 59.399L60.2821 42.219L93.8866 25.0391Z' fill='%2346E0FF'/%3E%3Cpath d='M93.8873 25.0391L59.7432 59.471L76.7073 58.6435L93.8873 25.0391Z' fill='%23FEE7FB'/%3E%3Cpath d='M93.8513 93.8281L59.7432 59.4681L76.7073 58.6406L93.8513 93.8281Z' fill='%2346E0FF'/%3E%3Cpath d='M93.8513 93.8287L59.7432 59.4688L60.1569 76.5947L93.8513 93.8287Z' fill='%23F4BBF2'/%3E%3Cpath d='M25.1318 93.7927L59.7436 59.4688L60.1574 76.5947L25.1318 93.7927Z' fill='%2346E0FF'/%3E%3Cpath d='M25.1318 93.7805L59.8156 59.3846L42.3118 58.5391L25.1318 93.7805Z' fill='%23FEE7FB'/%3E%3Cpath d='M0 59.1103L59.8691 58.9844L44.0563 73.358L0 59.1103Z' fill='%2346E0FF'/%3E%3Cpath d='M0.395508 59.242L59.8688 58.9902L45.4772 43.7891L0.395508 59.242Z' fill='%23F4BBF2'/%3E%3Cpath d='M59.6353 0L59.8691 58.9876L45.4775 43.7865L59.6353 0Z' fill='%2346E0FF'/%3E%3Cpath d='M59.6357 0L59.8696 59.1135L73.7935 43.7865L59.6357 0Z' fill='%23FEE7FB'/%3E%3Cpath d='M118.893 59.332L59.8691 59.1161L73.793 43.7891L118.893 59.332Z' fill='%2346E0FF'/%3E%3Cpath d='M118.893 59.3252L59.8691 59.1094L74.9983 73.519L118.893 59.3252Z' fill='%23F4BBF2'/%3E%3Cpath d='M59.6357 118.547L59.8696 59.1094L74.9988 73.519L59.6357 118.547Z' fill='%2346E0FF'/%3E%3Cpath d='M59.6356 118.548L59.8694 58.9844L44.0566 73.358L59.6356 118.548Z' fill='%23FEE7FB'/%3E%3C/svg%3E%0A"),
+    linear-gradient(225deg, rgba(105, 51, 123, 1) 0%, rgba(57, 49, 152, 1) 50%);
+  border: 3px solid #69337b;
+  border-radius: 0px 60px 60px 25px;
+  box-shadow: 4px 4px 0px 4px #69337b !important;
+  display: flex;
+  flex-direction: column !important;
+  margin-left: 40px !important;
+  width: fit-content !important;
+  padding: 8px !important;
+  /* box-shadow: -4px 4px 0px 2px #000000; */
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-position: -10% calc(-10% * -1), 100%;
+  background-size: 30%, 100%;
+  /* transform: scale(1.3); */
+  background-repeat: no-repeat;
+  overflow: hidden !important;
+}
+
+/* bg bintang */
+
+#action-buttons {
+  display: none !important;
+}
+#footer {
+  display: none !important;
+}
+
+#header.yt-live-chat-membership-item-renderer {
+  position: relative;
+  background-color: transparent !important;
+  padding: 8px 68px;
+  /* color: #1D4D7B !important; */
+  /* text-shadow: #000000 0px 0px 2px; */
+  /* min-height: 20px; */
+
+  min-width: 90% !important;
+  /* border: 8px solid #1D4D7B; */
+  display: flex;
+  /* text-align: center !important; */
+  border-radius: 16px;
+  font-weight: bold !important;
+  flex-direction: row;
+  align-items: center;
+}
+
+/* siku */
+
+#header.yt-live-chat-membership-item-renderer::before {
+  position: absolute !important;
+  left: 0px;
+  top: 0px;
+  width: 25px;
+  height: auto;
+  content: url("");
+}
+
+#header-subtext.yt-live-chat-membership-item-renderer {
+  color: #433192 !important;
+  /* line-height: 6px !important; */
+  background-color: #ffe78f;
+  /* margin-top: 5px !important; */
+  /* background-color: red; */
+  padding: 4px 15px 4px 15px;
+  border-radius: 34px;
+  width: fit-content;
+  font-size: 20px !important;
+  font-weight: bold !important;
+  /* font-family: 'cc_wild_wordsroman' !important; */
+  margin-left: 0px;
+  /* margin-left: auto; */
+  align-items: center;
+}
+
+#header-subtext.yt-live-chat-membership-item-renderer::before {
+  content: url("");
+  position: absolute;
+  width: 50px;
+  height: auto;
+  left: 100px;
+  top: 72%;
+  z-index: 2;
+}
+
+#header-primary-text.yt-live-chat-membership-item-renderer {
+  color: #ffffff !important;
+  font-size: 16px !important;
+  /* font-family: 'cc_wild_wordsroman' !important; */
+  font-weight: bold;
+  display: none;
+
+  /* padding-bottom: 12px !important; */
+}
+
+#timestamp {
+  display: none;
+}
+
+#author-photo.yt-live-chat-membership-item-renderer {
+  width: 40px;
+  height: 40px;
+}
+
+#author-photo.yt-live-chat-membership-item-renderer {
+  display: none;
+  margin-right: 16px;
+  overflow: hidden;
+  border-radius: 50%;
+  flex: none;
+}
+
+#header-content.yt-live-chat-membership-item-renderer {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  flex: 1;
+  text-align: left;
+  font-weight: bold !important;
+  /* font-family: 'cc_wild_wordsroman' !important; */
+}
+
+#header-content.yt-live-chat-membership-item-renderer::before {
+  position: absolute !important;
+  left: 30px;
+  top: 20px;
+  width: 34px;
+  content: url("data:image/svg+xml,%3Csvg viewBox='0 0 88 86' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M38.5974 21.0726C38.7167 21.0398 38.7167 20.8866 38.5974 20.8538L30.4052 18.4468L27.8653 17.7029C26.7206 17.3637 25.8262 16.5432 25.4685 15.5038L24.6218 13.0749L21.9984 5.55862C21.9627 5.44921 21.7957 5.44921 21.76 5.55862L19.1366 13.0749L18.3257 15.4053C17.956 16.4556 17.0617 17.2762 15.9288 17.6044L13.2816 18.3812L5.08943 20.7882C4.97019 20.821 4.97019 20.9742 5.08943 21.007L13.2816 23.414L15.8215 24.1579C16.9663 24.4971 17.8606 25.3177 18.2184 26.357L19.065 28.7859L21.6884 36.3022C21.7242 36.4116 21.8911 36.4116 21.9269 36.3022L24.5503 28.7859L25.3612 26.4555C25.7308 25.4052 26.6252 24.5846 27.758 24.2564L30.4052 23.4796L38.5974 21.0726Z' fill='%23FFE78F'/%3E%3Cg filter='url(%23filter0_f_4901_237)'%3E%3Cpath d='M38.5974 21.0726C38.7167 21.0398 38.7167 20.8866 38.5974 20.8538L30.4052 18.4468L27.8653 17.7029C26.7206 17.3637 25.8262 16.5432 25.4685 15.5038L24.6218 13.0749L21.9984 5.55862C21.9627 5.44921 21.7957 5.44921 21.76 5.55862L19.1366 13.0749L18.3257 15.4053C17.956 16.4556 17.0617 17.2762 15.9288 17.6044L13.2816 18.3812L5.08943 20.7882C4.97019 20.821 4.97019 20.9742 5.08943 21.007L13.2816 23.414L15.8215 24.1579C16.9663 24.4971 17.8606 25.3177 18.2184 26.357L19.065 28.7859L21.6884 36.3022C21.7242 36.4116 21.8911 36.4116 21.9269 36.3022L24.5503 28.7859L25.3612 26.4555C25.7308 25.4052 26.6252 24.5846 27.758 24.2564L30.4052 23.4796L38.5974 21.0726Z' fill='%23FFE78F'/%3E%3C/g%3E%3Cpath d='M45.2769 68.5094C45.3673 68.4845 45.3673 68.3683 45.2769 68.3434L39.063 66.5177L37.1365 65.9534C36.2682 65.6962 35.5898 65.0738 35.3185 64.2854L34.6763 62.4431L32.6864 56.7419C32.6593 56.6589 32.5327 56.6589 32.5055 56.7419L30.5156 62.4431L29.9006 64.2107C29.6202 65.0074 28.9418 65.6298 28.0826 65.8787L26.0746 66.468L19.8608 68.2937C19.7704 68.3186 19.7704 68.4347 19.8608 68.4596L26.0746 70.2853L28.0012 70.8496C28.8695 71.1069 29.5478 71.7293 29.8192 72.5177L30.4614 74.36L32.4512 80.0612C32.4784 80.1441 32.605 80.1441 32.6321 80.0612L34.622 74.36L35.2371 72.5924C35.5175 71.7957 36.1958 71.1733 37.0551 70.9243L39.063 70.3351L45.2769 68.5094Z' fill='%23FFE78F'/%3E%3Cg filter='url(%23filter1_f_4901_237)'%3E%3Cpath d='M45.2769 68.5094C45.3673 68.4845 45.3673 68.3683 45.2769 68.3434L39.063 66.5177L37.1365 65.9534C36.2682 65.6962 35.5898 65.0738 35.3185 64.2854L34.6763 62.4431L32.6864 56.7419C32.6593 56.6589 32.5327 56.6589 32.5055 56.7419L30.5156 62.4431L29.9006 64.2107C29.6202 65.0074 28.9418 65.6298 28.0826 65.8787L26.0746 66.468L19.8608 68.2937C19.7704 68.3186 19.7704 68.4347 19.8608 68.4596L26.0746 70.2853L28.0012 70.8496C28.8695 71.1069 29.5478 71.7293 29.8192 72.5177L30.4614 74.36L32.4512 80.0612C32.4784 80.1441 32.605 80.1441 32.6321 80.0612L34.622 74.36L35.2371 72.5924C35.5175 71.7957 36.1958 71.1733 37.0551 70.9243L39.063 70.3351L45.2769 68.5094Z' fill='%23FFE78F'/%3E%3C/g%3E%3Cpath d='M82.8665 41.1607C83.045 41.1115 83.045 40.8822 82.8665 40.8331L70.6024 37.2297L66.8 36.1159C65.0862 35.6082 63.7473 34.3798 63.2118 32.8238L61.9443 29.1877L58.0169 17.9353C57.9634 17.7716 57.7134 17.7716 57.6599 17.9353L53.7325 29.1877L52.5186 32.6764C51.9652 34.2488 50.6263 35.4772 48.9304 35.9685L44.9673 37.1314L32.7032 40.7348C32.5247 40.7839 32.5247 41.0133 32.7032 41.0624L44.9673 44.6658L48.7697 45.7795C50.4835 46.2873 51.8224 47.5157 52.3579 49.0717L53.6254 52.7078L57.5528 63.9601C57.6063 64.1239 57.8563 64.1239 57.9098 63.9601L61.8372 52.7078L63.0511 49.2191C63.6045 47.6467 64.9434 46.4183 66.6393 45.9269L70.6024 44.764L82.8665 41.1607Z' fill='%23FFE78F'/%3E%3Cg filter='url(%23filter2_f_4901_237)'%3E%3Cpath d='M82.8665 41.1607C83.045 41.1115 83.045 40.8822 82.8665 40.8331L70.6024 37.2297L66.8 36.1159C65.0862 35.6082 63.7473 34.3798 63.2118 32.8238L61.9443 29.1877L58.0169 17.9353C57.9634 17.7716 57.7134 17.7716 57.6599 17.9353L53.7325 29.1877L52.5186 32.6764C51.9652 34.2488 50.6263 35.4772 48.9304 35.9685L44.9673 37.1314L32.7032 40.7348C32.5247 40.7839 32.5247 41.0133 32.7032 41.0624L44.9673 44.6658L48.7697 45.7795C50.4835 46.2873 51.8224 47.5157 52.3579 49.0717L53.6254 52.7078L57.5528 63.9601C57.6063 64.1239 57.8563 64.1239 57.9098 63.9601L61.8372 52.7078L63.0511 49.2191C63.6045 47.6467 64.9434 46.4183 66.6393 45.9269L70.6024 44.764L82.8665 41.1607Z' fill='%23FFE78F'/%3E%3C/g%3E%3Cdefs%3E%3Cfilter id='filter0_f_4901_237' x='0' y='0.476562' width='43.6865' height='40.9062' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3E%3CfeGaussianBlur stdDeviation='2.5' result='effect1_foregroundBlur_4901_237'/%3E%3C/filter%3E%3Cfilter id='filter1_f_4901_237' x='14.793' y='51.6797' width='35.5518' height='33.4453' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3E%3CfeGaussianBlur stdDeviation='2.5' result='effect1_foregroundBlur_4901_237'/%3E%3C/filter%3E%3Cfilter id='filter2_f_4901_237' x='27.5693' y='12.8125' width='60.4307' height='56.2734' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3E%3CfeGaussianBlur stdDeviation='2.5' result='effect1_foregroundBlur_4901_237'/%3E%3C/filter%3E%3C/defs%3E%3C/svg%3E%0A");
+}
+
+yt-live-chat-author-chip {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+}
+
+.yt-live-chat-membership-item-renderer
+  > #author-name.yt-live-chat-author-chip.member {
+  margin-left: 10px;
+  color: #ffe790 !important;
+  font-size: 28px !important;
+  font-weight: bold !important;
+  /* font-family: "Monomaniac One", sans-serif; */
+  z-index: 2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: none;
+  width: calc(100% - 30px);
+  animation: none !important;
+
+  /* line-height: 0px !important; */
+  /* font-family: 'cc_wild_wordsroman' !important; */
+}
+
+#header-content-primary-column.yt-live-chat-membership-item-renderer {
+  width: 95%;
+  display: flex;
+  align-items: center;
+  margin-top: 4px;
+  justify-content: space-between !important;
+}
+
+#content.yt-live-chat-membership-item-renderer {
+  background-color: transparent !important;
+  border-radius: 20px !important;
+  padding: 0px !important;
+  z-index: 1;
+  height: fit-content !important;
+  width: auto;
+}
+
+#content.yt-live-chat-membership-item-renderer #message {
+  /* padding-bottom: 5px; */
+  vertical-align: middle !important;
+  font-size: 28px !important;
+  line-height: normal;
+  font-weight: bold;
+  border-radius: 12px;
+  margin-right: 12px;
+  padding-left: 32px;
+  padding-top: 8px;
+  overflow: hidden;
+  padding-bottom: 8px;
+}
+
+#content.yt-live-chat-membership-item-renderer #message > img {
+  /* padding-bottom: 5px; */
+  width: 40px;
+  height: 40px;
+}
+
+#content.yt-live-chat-membership-item-renderer #message > a {
+  /* padding-bottom: 5px; */
+  font-size: 28px !important;
+}
+
+#gradient.yt-live-chat-paid-message-renderer,
+#creator-heart-button.yt-live-chat-paid-message-renderer,
+#action-buttons.yt-live-chat-paid-message-renderer,
+#menu.yt-live-chat-paid-message-renderer,
+.yt-live-chat-paid-message-renderer #chat-badges,
+#input-container {
+  display: none !important;
+}
