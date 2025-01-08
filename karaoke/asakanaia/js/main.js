@@ -35,7 +35,7 @@ $("#song-list").sortable({
 $(".list-container")
   .on("mouseenter", ".s-container", function () {
     $(this).find(".btn-action").css({
-      "margin-left": "8px",
+      "margin-left": "10px",
       "margin-top": "6px",
 
       opacity: 1,
@@ -51,16 +51,9 @@ $(".list-container")
 $("#header")
   .on("mouseenter", "#container-input", function () {
     console.log("masukk");
-    $(this).find(".parent-input").css({
-      "margin-top": "58px",
-      opacity: 1,
-      transition: "0.5s",
-      "z-index": "-9999",
-    });
   })
   .on("mouseleave", function () {
     console.log("keluar");
-    $(this).find(".parent-input").css({ "margin-top": "-50px", opacity: "0" });
   });
 function updateList(data, index) {
   if (editType == "list") {
@@ -96,12 +89,7 @@ function edit(id, type) {
     $("#song").val(nowSinging[0].value);
   }
   state = "edit";
-  $(".parent-input").css({
-    "margin-top": "48px",
-    opacity: 1,
-    transition: "0.5s",
-    "z-index": "-9999",
-  });
+
   $(".parent-input #song").focus();
 }
 function deleteSong(id, type) {

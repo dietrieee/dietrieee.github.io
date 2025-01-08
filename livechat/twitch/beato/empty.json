@@ -1,0 +1,51 @@
+{
+  "testMessage": {
+    "type": "button",
+    "label": "Test message",
+    "value": "Test message",
+    "group": "Test"
+  },
+
+  "latestFollowerWording": {
+    "type": "text",
+    "label": "Wording for New Follower",
+    "value": "Has started to follow the channel!",
+    "group": "Wordings"
+  },
+  "latestSubscriberWording": {
+    "type": "text",
+    "label": "Wording for New Subscriber",
+    "value": "Has subscribed for ${data.amount} months${data.hasOwnProperty('tier') && data.tier ? ` with ${tier[data.tier.toString()]}` : ''}",
+    "group": "Wordings"
+  },
+  "latestCheerWording": {
+    "type": "text",
+    "label": "Wording for New Cheer",
+    "value": "Has cheered for ${data.amount} bits",
+    "group": "Wordings"
+  },
+  "latestRaidWording": {
+    "type": "text",
+    "label": "Wording for New Raid",
+    "value": "Has raided with ${data.amount} viewers",
+    "group": "Wordings"
+  },
+  "latestSubGiftWording": {
+    "type": "text",
+    "label": "Wording for New Community Gift",
+    "value": "Has gifted ${data.count} subs",
+    "group": "Wordings"
+  },
+  "latestPersonalGiftWording": {
+    "type": "text",
+    "label": "Wording for New Single Gift",
+    "value": "Has gifted ${data.name} a sub",
+    "group": "Wordings"
+  },
+  "latestTipWording": {
+    "type": "text",
+    "label": "Wording for Tip",
+    "value": "Has tipped for ${data.amount}",
+    "group": "Wordings"
+  }
+}

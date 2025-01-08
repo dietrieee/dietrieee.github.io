@@ -13,7 +13,7 @@ let hideCommands = "no";
 let ignoredUsers = [];
 let previousSender = "";
 let mergeMessages = false;
-let role = ["subscriber", "viewer", "artist", "vip"];
+let role = ["subscriber", "viewer", "moderator"];
 function getRandomInt(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
@@ -67,10 +67,10 @@ window.addEventListener("onEventReceived", function (obj) {
               displayColor: "#5B99FF",
               badges: [
                 {
-                  type: role[getRandomInt(0, 3)],
+                  type: role[getRandomInt(0, 2)],
                   version: "1",
                   url: "https://static-cdn.jtvnw.net/badges/v1/3267646d-33f0-4b17-b3df-f923a41db1d0/3",
-                  description: role[getRandomInt(0, 3)],
+                  description: role[getRandomInt(0, 2)],
                 },
                 {
                   type: "partner",
@@ -100,7 +100,7 @@ window.addEventListener("onEventReceived", function (obj) {
               msgId: "43285909-412c-4eee-b80d-89f72ba53142",
             },
             renderedText:
-              'Howdy! My name is Bill and I am here to serve <img src="https://static-cdn.jtvnw.net/emoticons/v1/25/1.0" srcset="https://static-cdn.jtvnw.net/emoticons/v1/25/1.0 1x, https://static-cdn.jtvnw.net/emoticons/v1/25/1.0 2x, https://static-cdn.jtvnw.net/emoticons/v1/25/3.0 4x" title="Kappa" class="emote">',
+              ' asdaklsjdkl ajs dasd ajsdkajsd kas dasdkajsdakjsdasjdakjsdjHowdy! My name is Bill and I am here to serve <img src="https://static-cdn.jtvnw.net/emoticons/v1/25/1.0" srcset="https://static-cdn.jtvnw.net/emoticons/v1/25/1.0 1x, https://static-cdn.jtvnw.net/emoticons/v1/25/1.0 2x, https://static-cdn.jtvnw.net/emoticons/v1/25/3.0 4x" title="Kappa" class="emote">',
           },
         },
       });
@@ -129,10 +129,8 @@ window.addEventListener("onEventReceived", function (obj) {
   }
   for (let i = 0; i < data.badges.length; i++) {
     badge = data.badges[i];
-    if (/Artist/i.test(badge.description)) {
-      badges = "artist";
-    } else if (/VIP/i.test(badge.description)) {
-      badges = "vip";
+    if (/Moderator/i.test(badge.description)) {
+      badges = "moderator";
     }
   }
   let username = data.displayName;

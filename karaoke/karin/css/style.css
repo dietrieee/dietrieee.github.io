@@ -1,0 +1,469 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap");
+* {
+  font-family: "Jura", serif;
+}
+
+body {
+  background-color: transparent !important;
+}
+@keyframes bganim {
+  0% {
+    opacity: 1;
+    transform: rotate(-15deg);
+    transform-origin: left;
+  }
+
+  100% {
+    opacity: 1;
+    transform: rotate(0);
+    transform-origin: left;
+  }
+}
+.all-wrapper {
+  display: flex !important;
+  align-items: start !important;
+  justify-content: start !important;
+  flex-direction: column !important;
+  background-color: transparent !important;
+  width: 100%;
+  margin: 3em;
+}
+.icon-pencil {
+  content: url("../assets/pencil-fill.svg");
+}
+.icon-eraser {
+  content: url("../assets/eraser-fill.svg");
+}
+.icon-play {
+  content: url("../assets/play-circle-fill.svg");
+}
+.icon-drop {
+  content: url("../assets/arrow-down-circle-line.svg");
+}
+.s-container {
+  width: fit-content;
+  height: auto;
+  position: relative;
+  margin-bottom: 8px;
+  animation: popout 1s ease-in-out;
+}
+.s-container::after {
+  content: url("data:image/svg+xml,%3csvg  viewBox='0 0 40 47' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M22.4632 18.93L15.5954 24.4855L8.56513 20.3371C13.1228 14.7214 17.7181 15.1523 22.4632 18.93Z' fill='%2395BDDB'/%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M15.5348 25.8794L23.937 19.0888L22.9419 18.3065C20.3435 16.2318 17.7612 15.1275 15.2264 15.2567C12.6916 15.3859 10.1176 16.7828 7.60569 19.8836L6.86325 20.7793L15.5348 25.8794ZM22.2815 19.0944L15.4137 24.6501L8.38354 20.5017C12.9413 14.886 17.5493 15.2867 22.2815 19.0944Z' fill='%23333536'/%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M24.6972 12.1004L25.6473 15.0045L13.1722 25.9409L13.8073 26.6407L26.2391 15.7214L29.4797 19.3197L17.0047 30.2561L17.6397 30.9559L30.3091 19.8171L33.3758 20.6291L20.2761 32.69C16.7945 33.5205 10.6828 27.9807 11.8472 23.6614L24.6972 12.1004Z' fill='%23A4C7E0'/%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M24.5148 12.0246L24.5839 11.9471L35.1875 10.3443L33.3057 20.4586L33.1933 20.5532L30.1268 19.7414L17.4573 30.8802L16.8223 30.1803L29.2973 19.2439L26.0567 15.6457L13.6249 26.5649L12.9898 25.8651L25.465 14.9287L24.5148 12.0246Z' fill='%23F5F5F5'/%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M24.1942 10.93L10.7437 23.055L10.6626 23.4128C9.97763 25.9388 11.3309 28.9083 13.4746 31.0383C15.6357 33.2114 18.5218 34.4457 20.5614 33.962L20.8818 33.8849L34.582 21.2602L36.8641 9.03334L24.1942 10.93ZM11.8337 23.6995L24.7528 12.0609L35.3435 10.4883L33.4617 20.6026L20.293 32.741C16.8114 33.5715 10.6997 28.0318 11.8337 23.6995Z' fill='%23333536'/%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M31.8361 11.1293C32.6036 12.5279 33.5819 13.5172 34.8191 14.1534L35.5091 10.5233L31.8361 11.1293Z' fill='%2395BDDB'/%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M25.8055 24.6427L19.6302 29.9234L21.9331 36.9745C27.7082 33.8063 28.2271 29.5678 25.8055 24.6427Z' fill='%2395BDDB'/%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M26.7819 23.9488L26.2058 22.7747L18.5007 29.3638L21.3906 38.2358L22.4764 37.6296C25.7078 35.8715 27.3953 33.7743 28.0075 31.5025C28.5717 29.1747 28.1039 26.6552 26.7819 23.9488ZM25.8471 24.3698L19.6718 29.6505L21.9748 36.7015C27.7499 33.5333 28.2687 29.2949 25.8471 24.3698Z' fill='%23333536'/%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M9.92035 29.2616C8.22416 30.0349 7.1954 30.8438 6.87081 32.2751C8.10299 31.4105 9.3681 31.3092 10.2416 32.0396C7.05594 34.531 5.74514 36.5039 6.49882 37.6826C7.9191 36.0419 12.0816 36.6444 14.3263 34.0004C11.8897 32.3876 10.8359 30.9021 9.92035 29.2616Z' fill='%239BC1DD'/%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M10.5246 28.7708L10.0581 27.929L9.19707 28.3457C7.14175 29.2866 5.9794 30.3238 5.58654 32.0828L5.04886 34.6004L7.17625 33.1551C7.17625 33.1551 7.18914 33.125 7.21954 33.138C6.34275 34.0119 5.74295 34.8259 5.38561 35.4937C4.84746 36.5839 4.90692 37.5371 5.35143 38.2625L6.07477 39.4281L6.98563 38.3904C7.24915 38.1105 7.60828 37.943 8.07149 37.7842C8.66444 37.574 9.37902 37.4157 10.0936 37.2573C11.7823 36.8378 13.5614 36.2069 14.8436 34.7213L15.6034 33.8687L14.6479 33.246C12.3761 31.6679 11.3748 30.3119 10.5246 28.7708ZM9.63772 29.2479C7.94153 30.0212 6.91278 30.8301 6.58819 32.2614C7.82042 31.3966 9.08553 31.2954 9.95905 32.0258C6.77337 34.5172 5.46252 36.4902 6.21624 37.6688C7.63647 36.0282 11.7989 36.6307 14.0436 33.9867C11.6071 32.3738 10.5708 30.9315 9.63772 29.2479Z' fill='%23333536'/%3e%3c/svg%3e");
+  width: 40px;
+  height: auto;
+  position: absolute;
+  left: 19px;
+  top: -14px;
+  z-index: 999 !important;
+  animation: bganim 400ms linear;
+  transform-origin: center;
+}
+.btn-action {
+  width: 20px;
+  height: 20px;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  padding: 2px;
+  background-color: #94bddb;
+  opacity: 0;
+  z-index: 1;
+  margin-top: 6px;
+  border-radius: 4px;
+  border-color: #333536;
+}
+
+@keyframes updown {
+  0% {
+    transform: translateY(5px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(5px);
+  }
+}
+.list-container {
+  /* width: 5em; */
+  margin-left: 0.5em;
+  height: auto;
+  display: block;
+  flex-direction: column;
+  /* align-items: start; */
+  /* justify-self: start; */
+  align-self: self-start;
+  /* justify-content: start; */
+  margin-top: 0px;
+}
+.list {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  margin-top: 0px;
+  overflow: visible !important;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(720deg);
+  }
+}
+
+@keyframes marquee {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -100%;
+  }
+}
+.parent-title {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  min-width: 170px;
+  min-height: 60px;
+  height: fit-content;
+  display: flex;
+  margin-left: 2em;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 14px;
+  padding-right: 14px;
+  overflow: visible;
+  border-radius: 8px;
+  z-index: 99 !important;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    -90deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(148, 189, 219, 1) 100%
+  );
+  box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.parent-title::before {
+  content: "";
+  width: 44px;
+  height: 44px;
+  position: absolute;
+  left: 15px;
+  top: 8px;
+  box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
+  background-color: #fff;
+  border-radius: 4px;
+  /* padding: 4px !important; */
+  background-image: url("../assets/music.png");
+  background-position: center;
+  background-size: 60%;
+  /* background-clip: padding-box; */
+  background-repeat: no-repeat;
+  /* animation: updown 9s infinite linear; */
+  transform-origin: center;
+}
+
+@keyframes shaking {
+  0% {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(-8deg);
+  }
+
+  75% {
+    transform: rotate(8deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+}
+.parent-title::after {
+  content: "";
+  width: 74px;
+  height: 74px;
+  position: absolute;
+  right: -35px;
+  bottom: -38px;
+  /* box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25); */
+  /* background-color: #fed0d2; */
+  border-radius: 12px;
+  /* padding: 4px !important; */
+  background-image: url("data:image/svg+xml,%3csvg width='41' height='30' viewBox='0 0 41 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M26.1698 6.86975C32.1877 6.47341 36.7537 7.77311 37.4484 10.464C38.1434 13.1556 34.7774 16.5033 29.3199 19.07C27.2104 20.0627 24.7886 20.9382 22.167 21.6151C19.5461 22.2918 17.0032 22.6982 14.6768 22.8508C8.6581 23.2473 4.09218 21.9476 3.39721 19.256C2.70243 16.5651 6.06839 13.2174 11.5267 10.6506C10.908 11.9559 10.5729 13.4025 10.5794 14.892C9.25845 15.9297 8.58422 16.9737 8.81248 17.8578C9.04094 18.7426 10.1363 19.3296 11.7945 19.5982C14.1562 19.9791 17.6588 19.7142 21.4251 18.7418C25.1922 17.7691 28.3852 16.3052 30.2672 14.8286C31.5881 13.7908 32.2624 12.7468 32.0339 11.862C31.8056 10.978 30.7103 10.3909 29.0521 10.1223C28.3366 8.81591 27.3431 7.71238 26.1698 6.86975Z' fill='%2394BDDB'/%3e%3cpath d='M29.0518 10.1276C29.4369 10.8313 29.7424 11.593 29.952 12.4048C30.1618 13.2173 30.2632 14.0317 30.267 14.8339C28.3849 16.3105 25.1919 17.7744 21.4248 18.747C17.6585 19.7195 14.1559 19.9844 11.7943 19.6035C11.4084 18.8999 11.1037 18.1381 10.8939 17.3256C10.6843 16.5138 10.5821 15.6996 10.5791 14.8972C10.5727 13.4078 10.9078 11.9612 11.5265 10.6559C12.7333 8.10872 15.0204 6.09617 17.9623 5.33658C20.9049 4.5768 23.8797 5.23075 26.1695 6.87503C27.3428 7.71766 28.3364 8.82119 29.0518 10.1276Z' fill='%23FDFEFE'/%3e%3cpath d='M29.3189 19.0786C28.1112 21.6259 25.8249 23.6382 22.8823 24.398C19.9404 25.1576 16.9649 24.5038 14.6758 22.8594C17.0022 22.7068 19.5451 22.3004 22.166 21.6237C24.7876 20.9468 27.2094 20.0713 29.3189 19.0786Z' fill='%23FDFEFE'/%3e%3cpath d='M23.0762 25.1407C20.0195 25.9299 16.7947 25.3254 14.2286 23.482C13.8836 23.2341 13.8048 22.7534 14.0526 22.4085C14.3006 22.0634 14.7812 21.9847 15.1261 22.2325C17.3204 23.8089 20.0779 24.3259 22.6915 23.6511C25.3049 22.9763 27.4676 21.1887 28.6253 18.7469C28.8073 18.3629 29.2661 18.1993 29.6499 18.3814C30.0338 18.5634 30.1975 19.0221 30.0154 19.4059C28.6619 22.2613 26.1326 24.3515 23.0762 25.1407Z' fill='%23333536'/%3e%3cpath d='M11.9857 20.3463C11.6531 20.4323 11.2921 20.2861 11.1194 19.9712C10.6972 19.2013 10.3706 18.3752 10.1487 17.5157C9.92691 16.6567 9.81277 15.7759 9.80946 14.8979C9.80267 13.3301 10.1559 11.7484 10.8309 10.3242C12.1837 7.46914 14.7127 5.37887 17.7696 4.58959C20.826 3.80041 24.051 4.40493 26.6178 6.24807C27.8979 7.16741 28.9727 8.38041 29.726 9.75593C30.149 10.5289 30.4754 11.3546 30.6964 12.2103C30.9174 13.0665 31.0316 13.9472 31.0358 14.8281C31.0378 15.2529 30.6948 15.5987 30.2702 15.6009C29.8454 15.6029 29.4994 15.2601 29.4974 14.8353C29.4939 14.0817 29.3962 13.3279 29.2069 12.5949C29.0178 11.8624 28.7385 11.1558 28.3767 10.4947C27.7334 9.32005 26.8149 8.28367 25.7205 7.49772C23.5255 5.9215 20.7676 5.40452 18.1543 6.07928C15.5406 6.75412 13.3781 8.54153 12.2213 10.9831C11.6442 12.2007 11.3422 13.5522 11.348 14.8917C11.3508 15.6425 11.4485 16.3958 11.6383 17.1311C11.8283 17.8669 12.1076 18.5737 12.4684 19.2315C12.6726 19.604 12.5363 20.0716 12.1638 20.2758C12.1062 20.3073 12.0463 20.3307 11.9857 20.3463Z' fill='%23333536'/%3e%3cpath d='M22.3589 22.3577C19.7484 23.0318 17.1806 23.4551 14.7267 23.6161C11.6328 23.82 8.89618 23.5876 6.81318 22.9442C4.49708 22.2288 3.05818 21.0192 2.65202 19.4461C2.24594 17.8734 2.91943 16.1186 4.59968 14.3714C6.11099 12.8 8.39302 11.2718 11.199 9.95232C11.5835 9.77201 12.0416 9.93661 12.2224 10.3211C12.4032 10.7055 12.2381 11.1637 11.8537 11.3446C6.67753 13.7785 3.57827 16.8798 4.14157 19.0615C4.705 21.2436 8.91833 22.4571 14.6258 22.0811C16.9842 21.9264 19.4566 21.5182 21.9743 20.8682C24.4924 20.218 26.8536 19.3781 28.9919 18.3718C34.1678 15.9377 37.2667 12.8362 36.7032 10.6541C36.1399 8.47245 31.9271 7.25922 26.22 7.6352C25.7961 7.66313 25.4298 7.34208 25.4019 6.91814C25.374 6.49422 25.6947 6.12843 26.1189 6.10002C29.2126 5.89625 31.9489 6.12868 34.032 6.77199C36.348 7.48735 37.7868 8.69684 38.1929 10.2695C38.599 11.8426 37.9256 13.5976 36.2455 15.3449C34.7344 16.9163 32.4527 18.4444 29.6469 19.7639C27.4219 20.8109 24.9698 21.6836 22.3589 22.3577Z' fill='%23333536'/%3e%3cpath d='M21.6171 19.4874C17.8675 20.4555 14.2425 20.773 11.6718 20.3585C9.07655 19.9381 8.27932 18.8716 8.06742 18.0509C7.8556 17.2305 8.03699 15.9119 10.1039 14.288C10.438 14.0254 10.9215 14.0835 11.1839 14.4177C11.4464 14.7517 11.3884 15.2353 11.0543 15.4977C9.46736 16.7445 9.507 17.4727 9.55698 17.6663C9.69045 18.1833 10.5728 18.622 11.9172 18.8398C14.2506 19.216 17.7331 18.9014 21.2325 17.9978C24.7323 17.0942 27.9322 15.6835 29.7921 14.2242C30.8627 13.3832 31.4223 12.5722 31.2888 12.0552C31.2389 11.8616 30.921 11.2052 28.9288 10.8825C28.5094 10.8145 28.2246 10.4195 28.2925 10.0002C28.3604 9.58074 28.7555 9.29586 29.1748 9.3638C31.7695 9.78413 32.5666 10.8501 32.7784 11.6705C32.9903 12.4912 32.809 13.8103 30.7421 15.4343C28.693 17.0419 25.3672 18.5191 21.6171 19.4874Z' fill='%23333536'/%3e%3c/svg%3e");
+  background-position: center;
+  background-size: 60%;
+  /* background-clip: padding-box; */
+  background-repeat: no-repeat;
+  animation: shaking 3s infinite linear;
+  transform-origin: center;
+}
+
+.title {
+  color: #333536;
+  box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
+
+  font-weight: bold;
+  position: relative;
+  /* width: 100%; */
+  min-width: 200px;
+  max-width: 350px;
+  text-align: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-break: keep-all;
+  overflow: hidden;
+  font-size: 20px;
+  margin-left: 2.5em;
+  padding: 6px 10px;
+  z-index: 9999 !important;
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+@keyframes berry {
+  0% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(10deg);
+  }
+}
+@keyframes popout {
+  0% {
+    transform: translateY(20px);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+.setlist {
+  font-size: 28px;
+  height: 5.5em;
+  font-weight: bold;
+  padding: 8px;
+  margin: 48px 0px 10px 20px;
+  border-radius: 8px;
+  color: #000000;
+  margin-bottom: 50px;
+  width: 15em;
+  box-sizing: border-box;
+  background: rgb(142, 87, 160);
+  background: url("../assets/bg-karin.png");
+  color: #fff;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  z-index: 9;
+  font-family: "Fira Code", monospace !important;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#box {
+  width: 100px;
+  height: 110px;
+  background-color: transparent;
+  overflow: hidden;
+  position: absolute;
+  transform: rotate(-2deg);
+  left: 11px;
+}
+
+#kaset {
+  width: 36px;
+  height: 36px;
+  position: absolute;
+  top: 32.5px;
+  left: 44.2px;
+
+  z-index: 99 !important;
+  content: url("../assets/kaset.png");
+  animation: rotation 15s linear infinite;
+}
+
+.setlist .main-title {
+  text-align: left;
+  font-size: 20px;
+  margin-left: 6.5em;
+  width: 230px;
+  margin-top: -60px !important;
+  color: #333536;
+  font-weight: bold !important;
+  /* transform: rotate(-2deg) !important; */
+}
+@keyframes sparkle {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.tagName {
+  background-color: #fff;
+  padding: 4px 8px;
+  color: #333536;
+  position: absolute;
+  left: 20px;
+  top: -48px;
+  width: fit-content;
+  height: auto;
+  font-size: 18px;
+  font-weight: bold !important;
+  border: 2px solid #94bddb;
+  z-index: 9;
+  border-radius: 6px;
+  box-shadow: 2px 2px 0px 0px #94bddb;
+  /* font-family: "Fira Code", monospace !important; */
+}
+.container-input {
+  width: 400px;
+  height: 100px;
+  position: absolute;
+  left: 50px;
+  /* right: 50%; */
+  top: 194px;
+  z-index: 1;
+  /* margin-left: -150px; */
+  /* background-color: red; */
+  /* background-color: black; */
+}
+.parent-input {
+  width: 200px;
+  height: 50px;
+  padding: 4px;
+  z-index: -9999 !important;
+  opacity: 0;
+}
+.parent-input #song {
+  border: 2px solid #94bddb;
+  color: #94bddb;
+  height: 34px;
+  width: 300px !important;
+  width: fit-content;
+  margin-left: 40px;
+  font-weight: bold;
+  z-index: -9999 !important;
+  background-color: #fff;
+  border-radius: 6px;
+  font-family: "Fira Code", monospace !important;
+}
+.parent-input #song:focus {
+  outline: none !important;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.parent-input #song::placeholder {
+  color: #94bddb;
+}
+.active {
+  display: block !important;
+  transition: 0.5;
+}
+#leaf-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+#leaf-container span {
+  position: absolute;
+  width: 55px;
+  height: 55px;
+  background-image: url("../assets/leaf.png");
+  /* background-image: url("data:image/svg+xml,%3csvg  viewBox='0 0 269 277' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M267.448 139.472L267.41 131.722L225.707 121.261C225.705 121.26 225.702 121.26 225.7 121.259C205.613 116.13 187.402 105.413 173.189 90.358C158.975 75.3011 149.345 56.5256 145.421 36.2205C145.421 36.2204 145.421 36.2203 145.421 36.2202L138.663 1.24128L130.809 1.23818L124.016 36.2529L124.016 36.2554C120.092 56.5516 110.466 75.3187 96.258 90.3691C82.0504 105.419 63.8463 116.133 43.7664 121.261C43.7658 121.261 43.7653 121.261 43.7647 121.261L2.01203 131.903L1.98882 139.65L43.6709 150.54C63.7384 155.79 81.8951 166.62 96.0248 181.769C110.154 196.916 119.674 215.757 123.477 236.094C123.477 236.095 123.477 236.095 123.478 236.095L130.803 275.575L138.669 275.572L145.96 236.123L145.96 236.123C149.726 215.742 159.235 196.852 173.373 181.664C187.513 166.476 205.697 155.618 225.8 150.363L225.801 150.363L267.448 139.472Z' fill='url(%23paint0_linear_4378_28)' stroke='white' stroke-width='8'/%3e%3cdefs%3e%3clinearGradient id='paint0_linear_4378_28' x1='134.718' y1='2' x2='134.718' y2='274.845' gradientUnits='userSpaceOnUse'%3e%3cstop stop-color='%23935BA2'/%3e%3cstop offset='1' stop-color='%23EBA4C8'/%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e"); */
+  background-size: cover;
+  animation: fall 9s linear infinite;
+  z-index: 99999 !important;
+}
+@keyframes fall {
+  0% {
+    transform: translate(0vw, -100vh) rotate(0deg) scale(0.5);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(calc(100vw * var(--random-x)), 100vh) rotate(720deg)
+      scale(1);
+    opacity: 1;
+  }
+}
+#leaf-container span:nth-child(1) {
+  --random-x: 0.5;
+  animation-delay: 1s;
+}
+#leaf-container span:nth-child(2) {
+  --random-x: 0.5;
+  animation-delay: 2s;
+}
+#leaf-container span:nth-child(3) {
+  --random-x: 0.5;
+  animation-delay: 3s;
+}
+#leaf-container span:nth-child(4) {
+  --random-x: 0.7;
+  animation-delay: 4s;
+}
+#leaf-container span:nth-child(5) {
+  --random-x: 0.6;
+  animation-delay: 5s;
+}
+#leaf-container span:nth-child(6) {
+  --random-x: 0.4;
+  animation-delay: 4.5s;
+}
+#leaf-container span:nth-child(7) {
+  --random-x: 0.3;
+  animation-delay: 3.5s;
+}
+#leaf-container span:nth-child(8) {
+  --random-x: 0.4;
+  animation-delay: 2.5s;
+}
+#leaf-container span:nth-child(9) {
+  --random-x: 0.6;
+  animation-delay: 5s;
+}
+#leaf-container span:nth-child(10) {
+  --random-x: 0.5;
+  animation-delay: 7s;
+}
+#leaf-container span:nth-child(11) {
+  --random-x: 0.4;
+  animation-delay: 6s;
+}

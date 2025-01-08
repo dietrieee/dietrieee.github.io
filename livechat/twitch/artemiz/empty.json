@@ -1,0 +1,157 @@
+{
+  "testMessage": {
+    "type": "button",
+    "label": "Test message",
+    "value": "Test message",
+    "group": "Test"
+  },
+  "subscriberIcon": {
+    "type": "image-input",
+    "label": "Subscriber Icon",
+    "group": "Icons"
+  },
+  "nonSubscriberIcon": {
+    "type": "image-input",
+    "label": "Non-subscriber Icon",
+    "group": "Icons"
+  },
+  "vipIcon": {
+    "type": "image-input",
+    "label": "VIP Icon",
+    "group": "Icons"
+  },
+  "artistIcon": {
+    "type": "image-input",
+    "label": "Artist Icon",
+    "group": "Icons"
+  },
+
+  "subscribeAlertBoxDecoration": {
+    "type": "image-input",
+    "label": "Subscribe Alert Box Decoration",
+    "group": "Icons"
+  },
+
+  "subsWingLeft": {
+    "type": "image-input",
+    "label": "Subscribe wing left",
+    "group": "Icons"
+  },
+  "subsWingRight": {
+    "type": "image-input",
+    "label": "Subscribe wing right",
+    "group": "Icons"
+  },
+
+  "followerAlertBoxDecoration": {
+    "type": "image-input",
+    "label": "Follower Alert Box Decoration",
+    "group": "Icons"
+  },
+  "followerDiamond": {
+    "type": "image-input",
+    "label": "Follower Diamond Box Decoration",
+    "group": "Icons"
+  },
+
+  "raidAlertBoxDecoration": {
+    "type": "image-input",
+    "label": "Raid Alert Box Decoration",
+    "group": "Icons"
+  },
+  "raidDiamond": {
+    "type": "image-input",
+    "label": "Raid Diamond Box Decoration",
+    "group": "Icons"
+  },
+
+  "giftAlertBoxDecoration": {
+    "type": "image-input",
+    "label": "Gift Alert Box Decoration",
+    "group": "Icons"
+  },
+
+  "giftWingLeft": {
+    "type": "image-input",
+    "label": "Gift wing left",
+    "group": "Icons"
+  },
+  "giftWingRight": {
+    "type": "image-input",
+    "label": "Gift wing right",
+    "group": "Icons"
+  },
+
+  "bitsAlertBoxDecoration": {
+    "type": "image-input",
+    "label": "Bits Alert Box Decoration",
+    "group": "Icons"
+  },
+
+  "bitsDiamond": {
+    "type": "image-input",
+    "label": "Bits Diamond Box Decoration",
+    "group": "Icons"
+  },
+
+  "cashAlertBoxDecoration": {
+    "type": "image-input",
+    "label": "Cash Alert Box Decoration",
+    "group": "Icons"
+  },
+
+  "coinLeft": {
+    "type": "image-input",
+    "label": "Coin left",
+    "group": "Icons"
+  },
+
+  "coinRight": {
+    "type": "image-input",
+    "label": "Coin right",
+    "group": "Icons"
+  },
+
+  "latestFollowerWording": {
+    "type": "text",
+    "label": "Wording for New Follower",
+    "value": "Has started to follow the channel!",
+    "group": "Wordings"
+  },
+  "latestSubscriberWording": {
+    "type": "text",
+    "label": "Wording for New Subscriber",
+    "value": "Has subscribed for ${data.amount} months${data.hasOwnProperty('tier') && data.tier ? ` with ${tier[data.tier.toString()]}` : ''}",
+    "group": "Wordings"
+  },
+  "latestCheerWording": {
+    "type": "text",
+    "label": "Wording for New Cheer",
+    "value": "Has cheered for ${data.amount} bits",
+    "group": "Wordings"
+  },
+  "latestRaidWording": {
+    "type": "text",
+    "label": "Wording for New Raid",
+    "value": "Has raided with ${data.amount} viewers",
+    "group": "Wordings"
+  },
+  "latestSubGiftWording": {
+    "type": "text",
+    "label": "Wording for New Community Gift",
+    "value": "Has gifted ${data.count} subs",
+    "group": "Wordings"
+  },
+  "latestPersonalGiftWording": {
+    "type": "text",
+    "label": "Wording for New Single Gift",
+    "value": "Has gifted ${data.name} a sub",
+    "group": "Wordings"
+  },
+  "latestTipWording": {
+    "type": "text",
+    "label": "Wording for Tip",
+    "value": "Has tipped for ${data.amount}",
+    "group": "Wordings"
+  }
+}

@@ -46,20 +46,10 @@ body {
   width: fit-content;
   height: auto;
   position: relative;
-  margin-bottom: 8px;
+  margin-bottom: 0px;
   animation: popout 1s ease-in-out;
 }
-.s-container::after {
-  content: url("data:image/svg+xml,%3csvg  viewBox='0 0 325 64' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cg clip-path='url(%23clip0_4851_213)'%3e%3cpath d='M325 -36H0V4H325V-36Z' fill='%23A03F3C'/%3e%3cpath d='M24.9925 -21C24.9925 -29.2843 19.3977 -36 12.4963 -36C5.59476 -36 0 -29.2843 0 -21V15.6768C0 23.961 5.59476 30.6768 12.4963 30.6768C19.3977 30.6768 24.9925 23.961 24.9925 15.6768V-21Z' fill='%23A03F3C'/%3e%3cpath d='M74.9925 -21C74.9925 -29.2843 69.3977 -36 62.4963 -36C55.5948 -36 50 -29.2843 50 -21V45.306C50 53.5903 55.5948 60.306 62.4963 60.306C69.3977 60.306 74.9925 53.5903 74.9925 45.306V-21Z' fill='%23A03F3C'/%3e%3cpath d='M124.993 -21C124.993 -29.2843 119.398 -36 112.496 -36C105.595 -36 100 -29.2843 100 -21V15.0259C100 23.3102 105.595 30.0259 112.496 30.0259C119.398 30.0259 124.993 23.3102 124.993 15.0259V-21Z' fill='%23A03F3C'/%3e%3cpath d='M174.992 -21C174.992 -29.2843 169.398 -36 162.496 -36C155.595 -36 150 -29.2843 150 -21V41.6094C150 49.8937 155.595 56.6094 162.496 56.6094C169.398 56.6094 174.992 49.8937 174.992 41.6094V-21Z' fill='%23A03F3C'/%3e%3cpath d='M224.992 -21C224.992 -29.2843 219.398 -36 212.496 -36C205.595 -36 200 -29.2843 200 -21V12.5863C200 20.8706 205.595 27.5863 212.496 27.5863C219.398 27.5863 224.992 20.8706 224.992 12.5863V-21Z' fill='%23A03F3C'/%3e%3cpath d='M274.992 -21C274.992 -29.2843 269.398 -36 262.496 -36C255.595 -36 250 -29.2843 250 -21V25.4655C250 33.7497 255.595 40.4655 262.496 40.4655C269.398 40.4655 274.992 33.7497 274.992 25.4655V-21Z' fill='%23A03F3C'/%3e%3cpath d='M324.992 -21C324.992 -29.2843 319.398 -36 312.496 -36C305.595 -36 300 -29.2843 300 -21V41.3676C300 49.6519 305.595 56.3676 312.496 56.3676C319.398 56.3676 324.992 49.6519 324.992 41.3676V-21Z' fill='%23A03F3C'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='clip0_4851_213'%3e%3crect width='325' height='64' fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e");
-  width: 190px;
-  height: auto;
-  position: absolute;
-  right: 19px;
-  bottom: -14px;
-  z-index: -9999 !important;
-  animation: bganim 400ms linear;
-  transform-origin: center;
-}
+
 .btn-action {
   width: 20px;
   height: 20px;
@@ -67,12 +57,12 @@ body {
   justify-content: center;
   font-size: 12px;
   padding: 2px;
-  background-color: #fed0d2;
+  background-color: #c9eefe;
   opacity: 0;
   z-index: 1;
   margin-top: 6px;
   border-radius: 4px;
-  border-color: #a03f3c;
+  border-color: #1b1b1b;
 }
 
 @keyframes updown {
@@ -88,7 +78,7 @@ body {
 }
 .list-container {
   /* width: 5em; */
-  margin-left: 0.5em;
+  margin-left: 0px;
   height: auto;
   display: block;
   flex-direction: column;
@@ -96,17 +86,16 @@ body {
   /* justify-self: start; */
   align-self: self-start;
   /* justify-content: start; */
-  margin-top: 0px;
+  margin-top: 20px;
 }
 .list {
   height: auto;
   width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: start;
-  justify-content: start;
+  flex-wrap: wrap;
   margin-top: 0px;
   overflow: visible !important;
+  gap: 8px;
 }
 
 @keyframes rotation {
@@ -127,43 +116,42 @@ body {
   }
 }
 .parent-title {
-  margin-top: 10px;
+  /* margin-top: 20px; */
   display: flex;
   align-items: center;
   position: relative;
-  width: 100%;
-  min-width: 170px;
+  width: fit-content;
+  /* min-width: 170px; */
   min-height: 60px;
   height: fit-content;
   display: flex;
-  margin-left: 2em;
+  margin-left: 0.5em;
+  /* margin-right: 12px !important; */
   align-items: center;
   justify-content: center;
   padding: 6px 14px;
   padding-right: 14px;
   overflow: visible;
-  border-radius: 14px;
-  border: 3px solid #a03f3c;
+  border-radius: 8px;
+  border: 2px solid #1b1b1b;
   z-index: 99 !important;
-  background: rgb(248, 118, 127);
-
-  background: linear-gradient(
-    90deg,
-    rgba(248, 118, 127, 1) 0%,
-    rgba(244, 85, 112, 1) 100%
-  );
-  box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
+  background-color: #ece0fe;
+  box-shadow: 3px 4px 0px 0px #1b1b1b;
+  background-image: url("../assets/bg-list.png");
+  background-position: 98%;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 .parent-title::before {
   content: "";
   width: 44px;
   height: 44px;
   position: absolute;
-  left: -25px;
-  top: 4px;
+  left: 5px;
+  top: 6px;
   box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
-  background-color: #fed0d2;
-  border-radius: 12px;
+  background-color: #1b1b1b;
+  border-radius: 8px;
   /* padding: 4px !important; */
   background-image: url("../assets/music.png");
   background-position: center;
@@ -197,45 +185,25 @@ body {
     transform: rotate(0deg);
   }
 }
-.parent-title::after {
-  content: "";
-  width: 44px;
-  height: 44px;
-  position: absolute;
-  right: -15px;
-  top: -28px;
-  /* box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25); */
-  /* background-color: #fed0d2; */
-  border-radius: 12px;
-  /* padding: 4px !important; */
-  background-image: url("../assets/kakikucing.png");
-  background-position: center;
-  background-size: 60%;
-  /* background-clip: padding-box; */
-  background-repeat: no-repeat;
-  animation: shaking 3s infinite linear;
-  transform-origin: center;
-}
 
 .title {
-  color: #a03f3c;
-  box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
+  color: #1b1b1b;
 
-  font-weight: normal;
+  font-weight: bold;
   position: relative;
   /* width: 100%; */
-  min-width: 200px;
-  max-width: 350px;
+  min-width: 100px;
+  max-width: 100%;
   text-align: left;
   text-overflow: ellipsis;
   white-space: nowrap;
   word-break: keep-all;
   overflow: hidden;
   font-size: 20px;
-  margin-left: 0.1em;
+  margin-left: 2em;
   padding: 2px 10px;
   z-index: 9999 !important;
-  background-color: #fed0d2;
+
   border-radius: 8px;
 }
 
@@ -266,21 +234,22 @@ body {
 .setlist {
   font-size: 28px;
   height: 5.5em;
+  /* background-color: red !important; */
   font-weight: bold;
-  padding: 8px;
-  margin: 48px 0px 10px 20px;
+  padding: 0px;
+  margin: -60px 0px 10px 10px;
   border-radius: 8px;
   color: #000000;
-  margin-bottom: 50px;
+  /* margin-bottom: 50px; */
   width: 15em;
   box-sizing: border-box;
   background: rgb(142, 87, 160);
-  background: url("../assets/bg-pia.png");
+  background: url("../assets/kanaia-bg.png");
   color: #fff;
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-
+  /* box-sizing: border-box; */
   z-index: 9;
   font-family: "Fira Code", monospace !important;
   position: relative;
@@ -289,22 +258,35 @@ body {
   justify-content: center;
 }
 
+.left-box {
+  width: 12.5em;
+  height: 12.5em;
+  /* background-color: red; */
+  position: relative;
+  background-image: url("../assets/leftbox.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
 #box {
-  width: 100px;
-  height: 110px;
+  width: 150px;
+  height: 150px;
   background-color: transparent;
   overflow: hidden;
   position: absolute;
-  transform: rotate(-2deg);
-  left: 11px;
+  /* transform: rotate(-2deg); */
+  left: 81px;
+  top: 20px;
+  /* background-color: red; */
 }
 
 #kaset {
-  width: 36px;
-  height: 36px;
+  width: 126px;
+  height: 126px;
   position: absolute;
-  top: 33.8px;
-  left: 41.4px;
+  top: 18.8px;
+  left: -41.4px;
 
   z-index: 99 !important;
   content: url("../assets/kaset.png");
@@ -314,10 +296,16 @@ body {
 .setlist .main-title {
   text-align: left;
   font-size: 28px;
-  margin-left: 5.2em;
-  width: 220px;
-  margin-top: -52px !important;
-  color: #a03f3c;
+  /* margin-left: 0.2em; */
+  width: 320px;
+  height: auto;
+  top: 44px;
+  left: 50px;
+  /* margin-top: -52px !important; */
+  color: #1b1b1b;
+  /* background-color: red; */
+  z-index: 99999 !important;
+  position: absolute;
   /* transform: rotate(-2deg) !important; */
 }
 @keyframes sparkle {
@@ -333,52 +321,78 @@ body {
 }
 
 .tagName {
-  background-color: #fed0d2;
+  background-color: #ece0fe;
   padding: 4px 8px;
   border-radius: 2px;
-  color: #a03f3c;
+  color: #1b1b1b;
   position: absolute;
-  right: 0px;
-  top: -18px;
+  right: 20px;
+  top: -15px;
   width: fit-content;
   height: auto;
   font-size: 18px;
   font-weight: bold !important;
-  border: 2px solid #a03f3c;
+  border: 2px solid #1b1b1b;
   z-index: 9;
-  border-radius: 24px;
+  border-radius: 8px;
+  box-shadow: 2px 3px 0px 0px #1b1b1b;
+
   /* font-family: "Fira Code", monospace !important; */
 }
 .container-input {
-  width: 400px;
+  width: calc(100% - 2px);
   height: 100px;
-  position: absolute;
-  left: 50px;
-  /* right: 50%; */
-  top: 194px;
+  position: relative;
+  margin-top: 200px;
   z-index: 1;
+  background-color: #ece0fe;
+  border-radius: 8px;
+  border: 2px solid #1b1b1b;
+  box-shadow: 3px 4px 0px 0px #1b1b1b;
+  box-sizing: border-box;
   /* margin-left: -150px; */
   /* background-color: red; */
   /* background-color: black; */
 }
+
+.container-input::before {
+  content: " ";
+  width: 50px;
+  height: 100%;
+  /* background-color: red; */
+  position: absolute;
+  background-image: url("../assets/search.png");
+  background-repeat: no-repeat;
+  background-size: 70%;
+  background-position: center;
+  box-sizing: border-box;
+}
+
 .parent-input {
-  width: 200px;
+  /* background-color: red; */
+  width: 100%;
   height: 50px;
   padding: 4px;
   z-index: -9999 !important;
-  opacity: 0;
+  opacity: 1;
+  position: relative;
+  margin-right: 12px !;
+}
+.form-control {
+  border: none !important;
+  border-bottom: 2px solid #1b1b1b !important;
+  border-radius: 0px !important;
 }
 .parent-input #song {
-  border: 2px solid #a03f3c;
-  color: #a03f3c;
-  height: 34px;
-  width: 300px !important;
-  width: fit-content;
-  margin-left: 20px;
+  color: #1b1b1b;
+  height: 40px;
+  width: 80% !important;
+  font-size: 20px;
+  margin-left: 50px;
   font-weight: bold;
   z-index: -9999 !important;
-  background-color: #fed0d2;
-  border-radius: 8px;
+  background-color: transparent;
+  /* border-radius: 8px; */
   font-family: "Fira Code", monospace !important;
 }
 .parent-input #song:focus {
@@ -388,7 +402,8 @@ body {
 }
 
 .parent-input #song::placeholder {
-  color: #a03f3c;
+  color: #1b1b1b;
+  border: none;
 }
 .active {
   display: block !important;
