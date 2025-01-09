@@ -1,0 +1,3 @@
+tutorial : https://dietrieee.github.io/karaoke-tutorial
+
+link plugin : https://dietrieee.github.io/karaoke/karin/

@@ -1,32 +1,164 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Share+Tech+Mono&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Share+Tech+Mono&display=swap");
 
 * {
   font-family: "Share Tech Mono", monospace;
 }
 
 body {
-   background-color: rgb(16, 15, 15);
-   color: rgb(247, 243, 243);
-   font-size: 18px;
-   line-height: 1.5em;
+  /* background-color: #e3e0f3; */
+  color: #030303;
+  font-size: 18px !important;
+  font-weight: bold;
+  line-height: 1.5em;
+  background-color: #333355 !important;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='100%25' width='100%25'%3E%3Cdefs%3E%3Cpattern id='doodad' width='200' height='200' viewBox='0 0 40 40' patternUnits='userSpaceOnUse' patternTransform='rotate(135)'%3E%3Crect width='100%25' height='100%25' fill='rgba(45, 55, 72,1)'/%3E%3Cpath d='M-10-0.5h60v1h-60z' fill='rgba(74, 85, 104,1)'/%3E%3Cpath d='M-10 39.5h60v1h-60z' fill='rgba(74, 85, 104,1)'/%3E%3Cpath d='M-10 29.5h60v1h-60z' fill='rgba(74, 85, 104,1)'/%3E%3Cpath d='M29.5-10v60h1v-60z' fill='rgba(74, 85, 104,1)'/%3E%3Cpath d='M9.5-10v60h1v-60z' fill='rgba(74, 85, 104,1)'/%3E%3C/pattern%3E%3C/defs%3E%3Crect fill='url(%23doodad)' height='200%25' width='200%25'/%3E%3C/svg%3E ");
+  background-attachment: fixed;
+  background-size: cover;
+}
 
-  }
+.brand {
+  background-color: #030303;
+  color: #88ceeb;
+  padding: 8px 8px;
+  width: fit-content;
+}
 
-.container {
-  margin: 90px;
+.container-base {
+  margin: 40px;
+  width: 50vw;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #88ceeb;
+  padding: 20px;
+  border-radius: 4px;
+  border: 2px solid #030303;
+  box-shadow: 6px 6px 0px 0px #030303;
 }
 
 a {
-  color: rgb(16, 15, 15);
-  background-color: antiquewhite;
+  color: #88ceeb !important;
+  background-color: #030303;
+  padding: 0px 8px;
+}
+
+.price {
+  background-color: #030303;
+  color: #88ceeb;
+  padding: 0px 8px;
+}
+
+.img-link {
+  background-color: transparent;
+  padding: 0px;
+}
+
+.nav-link {
+  background-color: #030303 !important;
+  color: #88ceeb !important;
+  margin-right: 12px;
+  border-radius: 4px !important;
+  border-color: #030303 !important;
+  box-shadow: 2px 2px 0px 0px #88ceeb;
+  margin-top: 8px;
+}
+
+.nav-link.active {
+  color: #030303 !important;
+  box-shadow: 2px 2px 0px 0px #030303;
+
+  background-color: #88ceeb !important;
+}
+.nav-tabs {
+  border: none !important;
+}
+.tab-content {
+  margin-top: 12px !important;
+}
+
+.card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.base-card {
+  background-color: #88ceeb;
+  border: 2px solid #030303;
+  box-shadow: 4px 4px 0px 0px #030303;
+  border-radius: 4px;
+  padding: 8px;
+  min-width: 300px;
+  width: 47%;
+  height: fit-content;
+  /* font-weight: bold; */
+  font-size: 18px;
+}
+
+.twitter-tweet {
+  width: 100% !important;
+  height: auto !important;
+
+  /* background-color: red; */
+}
+
+.yt-video {
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 16/9;
+
+  /* background-color: red; */
+}
+
+.title {
+  margin: 8px 0px;
+  background-color: #030303;
+  /* border-radius: 4px; */
+  color: #88ceeb;
+  padding: 4px 8px;
+  width: fit-content;
+}
+
+.profile-image {
+  width: 70px;
+  height: 70px;
+  border-radius: 0px;
+  object-fit: cover;
+  background-image: url("./img/profile.png");
+  background-repeat: no-repeat;
+  background-size: 170%;
+  background-position: center;
+}
+
+.client-image {
+  width: 12em;
+  height: auto;
+  background-color: #88ceeb;
+  border: 2px solid #030303;
+  padding: 8px;
+  border-radius: 2px;
+  box-shadow: 2px 2px 0px 0px #030303;
 }
 
 @media only screen and (max-width: 600px) {
-  .container {
+  .container-base {
     margin: 30px;
+    width: 85%;
   }
- 
+  .base-card {
+    min-width: 300px;
+    height: fit-content;
+  }
+  .twitter-tweet {
+    width: 100% !important;
+    height: auto !important;
 
+    /* background-color: red; */
+  }
+
+  .yt-video {
+    width: 100% !important;
+    height: auto !important;
+
+    /* background-color: red; */
+  }
 }
-
