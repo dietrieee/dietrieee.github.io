@@ -20,6 +20,14 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+function limitText(text) {
+  if (text.length > 14) {
+    return text.substring(0, 13) + "..";
+  } else {
+    return text;
+  }
+}
+
 window.addEventListener("onEventReceived", function (obj) {
   if (obj.detail.listener === "event") return;
 
@@ -63,7 +71,9 @@ window.addEventListener("onEventReceived", function (obj) {
               },
               nick: channelName,
               userId: "100135110",
-              displayName: channelName,
+              //displayName: channelName,
+              displayName: limitText(channelName),
+
               displayColor: "#5B99FF",
               badges: [
                 {
@@ -80,7 +90,8 @@ window.addEventListener("onEventReceived", function (obj) {
                 },
               ],
               channel: channelName,
-              text: "Howdy! My name is Bill and I am here to serve Kappa",
+              text: "Howdy! My name is Bill",
+              //text: "Howdy! My name is Bill and I am here to serve Kappa cuabosc coiasc caiusc asoiac asic aoisc aoisc",
               isAction: !1,
               emotes: [
                 {

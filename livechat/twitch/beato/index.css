@@ -29,9 +29,9 @@ body {
   margin-right: 20px;
   margin-bottom: 30px;
   position: relative;
-  vertical-align: baseline;
+  vertical-align: center;
   z-index: 1;
-  max-width: 600px;
+  max-width: 800px;
 }
 
 @keyframes zoom-in {
@@ -51,6 +51,10 @@ body {
 
 .message-wrapper {
   display: flex;
+
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
 }
 
 @keyframes popout {
@@ -128,7 +132,7 @@ body {
 }
 
 .user-box {
-  align-items: center;
+  align-items: center !important;
   /* border: solid 3px #000; */
   background: rgb(233, 152, 93);
   background: linear-gradient(
@@ -136,21 +140,20 @@ body {
     rgba(233, 152, 93, 1) 0%,
     rgba(255, 98, 113, 1) 100%
   );
+  border: 3px solid #ffc7e8;
   border-radius: 50px 0px 0px 0px;
   color: #fff;
   display: flex;
-  margin-left: 16px;
-  margin-bottom: 14px;
-  border: 2px solid #fff;
+  margin-left: 26px;
+
+  text-align: center !important;
   gap: 12px;
   overflow: visible;
-  padding: 10px 38px 10px 38px;
+  padding: 10px 10px 10px 0px;
   position: relative;
-  height: max-content;
-  width: 400px;
+  height: fit-content;
+  width: 300px;
   z-index: 10;
-  left: 50px;
-  top: 10px;
 }
 
 .user-box::before {
@@ -202,43 +205,45 @@ body {
 
 .user-box > span {
   color: #fff !important;
-  font-weight: normal;
+  font-weight: bold;
   line-height: 18px;
   margin-left: 30px;
+  font-size: 18px;
   position: relative;
   z-index: 11;
-  font-family: "Calistoga", serif;
+  text-transform: uppercase;
+  text-align: center;
+  width: 100%;
+  /* font-family: "Calistoga", serif; */
 }
 
 .user-message {
-  background: rgb(28, 18, 29);
+  background: rgb(0, 0, 0);
   background: linear-gradient(
     90deg,
     rgba(28, 18, 29, 1) 0%,
-    rgba(30, 20, 31, 1) 8%,
-    rgba(52, 35, 50, 1) 16%,
-    rgba(52, 35, 50, 1) 25%,
-    rgba(52, 35, 50, 1) 33%,
-    rgba(52, 35, 50, 1) 41%,
-    rgba(72, 49, 66, 0.9710084717480743) 51%,
-    rgba(97, 67, 88, 0.9205883036808473) 61%,
-    rgba(128, 90, 115, 0.8785714969581583) 70%,
-    rgba(166, 116, 147, 0.7609244381346288) 78%,
-    rgba(207, 146, 182, 0.6544818611038166) 86%,
-    rgba(207, 146, 182, 0.48361351376488093) 93%,
+    rgba(30, 20, 31, 0.8015581232492998) 30%,
+    rgba(38, 25, 38, 0.6951155462184874) 45%,
+    rgba(52, 35, 50, 0.6026785714285714) 60%,
+    rgba(72, 49, 66, 0.5) 70%,
+    rgba(97, 67, 88, 0.4) 75%,
+    rgba(128, 90, 115, 0.3) 80%,
+    rgba(166, 116, 147, 0.2) 85%,
+    rgba(207, 146, 182, 0.1) 90%,
     rgba(255, 180, 223, 0) 100%
   );
-  border: 2px solid #ffffff;
+
   display: block;
   border-radius: 50px;
   border-bottom-right-radius: 0px;
-  margin-top: -8px;
+  border: solid 3px #ffc7e8;
+  margin-left: -80px;
   max-width: 1260px;
   min-width: 560px;
   width: 100%;
-  max-height: 247px;
-  min-height: max-content;
-  padding: 16px 34px 16px 90px;
+  max-height: 180px;
+  min-height: 80px;
+  padding: 32px 40px 32px 120px;
   position: relative;
   word-wrap: break-word;
 }
@@ -246,28 +251,46 @@ body {
 .user-message span {
   color: #fff;
   font-weight: 700;
+  font-size: 22px;
+  line-height: normal;
   position: relative;
   z-index: 1;
   animation: fade-in 0.7s;
-  font-family: "Varela Round", serif;
+  /* font-family: "Varela Round", serif; */
 }
 
 .user-message::before {
   position: absolute;
-  width: 18px;
-  height: 18px;
-  top: 30px;
-  left: 60px;
-  content: url("data:image/svg+xml,%3Csvg viewBox='0 0 23 23' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M22.7868 11.1594C16.3762 13.694 14.3262 15.7439 11.7918 22.1548C9.25738 15.7439 7.20749 13.694 0.796875 11.1594C7.20749 8.62491 9.25738 6.57493 11.7918 0.164062C14.3262 6.53766 16.4135 8.62491 22.7868 11.1594Z' fill='%23FFD071'/%3E%3C/svg%3E%0A");
+  width: 38px;
+  height: 38px;
+  bottom: -18px;
+  right: -15px;
+  animation: rotate 6s infinite linear;
+  content: url("data:image/svg+xml,%3Csvg viewBox='0 0 80 80' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M49.0304 56.3943C49.7013 71.7879 39.9736 79.466 39.9736 79.466C39.9736 79.466 30.2459 71.7879 30.9168 56.3943C31.1031 52.3316 27.7114 48.9398 23.6489 49.1261C8.25596 49.797 0.578125 40.0689 0.578125 40.0689C0.578125 40.0689 8.25596 30.3408 23.6489 31.0118C27.7114 31.1981 31.1031 27.8063 30.9168 23.7436C30.2459 8.35002 39.9736 0.671875 39.9736 0.671875C39.9736 0.671875 49.7013 8.35002 49.0304 23.7436C48.8441 27.8063 52.2358 31.1981 56.2983 31.0118C71.6913 30.3408 79.3691 40.0689 79.3691 40.0689C79.3691 40.0689 71.6913 49.797 56.2983 49.1261C52.1985 48.977 48.8441 52.3316 49.0304 56.3943Z' fill='%23FFD071'/%3E%3C/svg%3E%0A");
 }
 
 .user-message::after {
+  content: "";
+  background-image: url("data:image/svg+xml,%3csvg width='21' height='21' viewBox='0 0 7 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M6.32042 3.77005C4.60042 4.45005 4.05041 5.00006 3.37041 6.72006C2.69041 5.00006 2.14041 4.45005 0.42041 3.77005C2.14041 3.09005 2.69041 2.54007 3.37041 0.820068C4.05041 2.54007 4.61042 3.09005 6.32042 3.77005Z' fill='%23FFD071'/%3e%3c/svg%3e"),
+    url("data:image/svg+xml,%3csvg width='504' height='4' viewBox='0 0 504 4' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M2 2H502' stroke='url(%23paint0_linear_595_2)' stroke-width='3' stroke-linecap='round'/%3e%3cdefs%3e%3clinearGradient id='paint0_linear_595_2' x1='2' y1='2.5' x2='502' y2='2.5' gradientUnits='userSpaceOnUse'%3e%3cstop stop-color='%23FFD071' stop-opacity='0'/%3e%3cstop offset='0.204575' stop-color='%23FFD071' stop-opacity='0.3'/%3e%3cstop offset='0.34588' stop-color='%23FFD071' stop-opacity='0.6'/%3e%3cstop offset='0.5' stop-color='%23FFD071'/%3e%3cstop offset='0.647848' stop-color='%23FFD071' stop-opacity='0.6'/%3e%3cstop offset='0.800767' stop-color='%23FFD071' stop-opacity='0.3'/%3e%3cstop offset='1' stop-color='%23FFD071' stop-opacity='0'/%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e"),
+    url("data:image/svg+xml,%3csvg width='504' height='4' viewBox='0 0 504 4' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M2 2H502' stroke='url(%23paint0_linear_595_2)' stroke-width='3' stroke-linecap='round'/%3e%3cdefs%3e%3clinearGradient id='paint0_linear_595_2' x1='2' y1='2.5' x2='502' y2='2.5' gradientUnits='userSpaceOnUse'%3e%3cstop stop-color='%23FFD071' stop-opacity='0'/%3e%3cstop offset='0.204575' stop-color='%23FFD071' stop-opacity='0.3'/%3e%3cstop offset='0.34588' stop-color='%23FFD071' stop-opacity='0.6'/%3e%3cstop offset='0.5' stop-color='%23FFD071'/%3e%3cstop offset='0.647848' stop-color='%23FFD071' stop-opacity='0.6'/%3e%3cstop offset='0.800767' stop-color='%23FFD071' stop-opacity='0.3'/%3e%3cstop offset='1' stop-color='%23FFD071' stop-opacity='0'/%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e");
+  background-size: 21px 21px, calc(100% - 120px) 4px, calc(100% - 120px) 4px;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: 60px 50%, 85% 8%, 85% 92%;
   position: absolute;
-  width: 34px;
-  height: 34px;
-  bottom: -10px;
-  right: -10px;
-  content: url("data:image/svg+xml,%3Csvg viewBox='0 0 80 80' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M49.0304 56.3943C49.7013 71.7879 39.9736 79.466 39.9736 79.466C39.9736 79.466 30.2459 71.7879 30.9168 56.3943C31.1031 52.3316 27.7114 48.9398 23.6489 49.1261C8.25596 49.797 0.578125 40.0689 0.578125 40.0689C0.578125 40.0689 8.25596 30.3408 23.6489 31.0118C27.7114 31.1981 31.1031 27.8063 30.9168 23.7436C30.2459 8.35002 39.9736 0.671875 39.9736 0.671875C39.9736 0.671875 49.7013 8.35002 49.0304 23.7436C48.8441 27.8063 52.2358 31.1981 56.2983 31.0118C71.6913 30.3408 79.3691 40.0689 79.3691 40.0689C79.3691 40.0689 71.6913 49.797 56.2983 49.1261C52.1985 48.977 48.8441 52.3316 49.0304 56.3943Z' fill='%23FFD071'/%3E%3C/svg%3E%0A");
+  top: 0px;
+  left: 30px;
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes fade-in {
@@ -326,7 +349,7 @@ body {
 }
 
 .event-wrapper {
-  border: solid 1px #fff;
+  border: solid 3px #ffc7e8;
   border-radius: 50px;
   background: rgb(255, 98, 113);
   background: linear-gradient(
@@ -482,7 +505,7 @@ body {
     rgba(0, 0, 0, 0) 100%
   );
   color: #fff;
-  border: solid 1px #fff;
+  border: solid 3px #ffc7e8;
   border-radius: 50px 0px 0px 0px;
   font-size: 24px;
   font-weight: normal;
