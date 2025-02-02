@@ -133,7 +133,7 @@ yt-live-chat-text-message-renderer[is-deleted],
 yt-live-chat-viewer-engagement-message-renderer {
   display: none !important;
 }
-@keyframes anim {
+@keyframes popout {
   0% {
     opacity: 1;
     transform: translateY(36px);
@@ -458,7 +458,7 @@ yt-live-chat-author-chip {
   border-radius: 16px;
   box-shadow: 0px 0px 0px 8px #ffffff, 0px 6px 0px 12px #fce9a4,
     0px 6px 10px 4px #000;
-  animation: anim 500ms;
+  animation: popout 500ms;
   transform-origin: left bottom;
 }
 .yt-live-chat-membership-item-renderer
@@ -495,7 +495,7 @@ yt-live-chat-author-chip {
 }
 yt-live-chat-paid-message-renderer {
   transform: scale(1.2);
-  animation: anim 500ms;
+  animation: popout 500ms;
   transform-origin: left bottom;
 }
 #card.yt-live-chat-paid-message-renderer {
