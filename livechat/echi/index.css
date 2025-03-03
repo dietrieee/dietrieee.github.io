@@ -697,9 +697,6 @@ ytd-sponsorships-live-chat-gift-purchase-announcement-renderer {
   border: 2px solid #f98dfc;
 }
 
-.ytd-sponsorships-live-chat-header-renderer#header::after {
-}
-
 .ytd-sponsorships-live-chat-header-renderer#content {
   padding: 0px;
 }
