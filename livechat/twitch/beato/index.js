@@ -8,7 +8,7 @@ let totalMessages = 0,
   provider;
 let animationIn = "bounceIn";
 let animationOut = "bounceIn";
-let hideAfter = 60;
+let hideAfter = 1600;
 let hideCommands = "no";
 let ignoredUsers = [];
 let previousSender = "";
