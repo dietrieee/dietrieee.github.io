@@ -158,7 +158,7 @@ body {
   background-size: contain;
   /* background-clip: padding-box; */
   background-repeat: no-repeat;
-  animation: shaking 3s infinite ease-in-out;
+  /* animation: shaking 3s infinite ease-in-out; */
   transform-origin: center;
 }
 
@@ -179,7 +179,7 @@ body {
   background-size: contain;
   /* background-clip: padding-box; */
   background-repeat: no-repeat;
-  animation: shaking 2s infinite ease-in-out;
+  /* animation: shaking 2s infinite ease-in-out; */
   transform-origin: center;
 }
 
@@ -308,7 +308,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  animation: shaking 2s infinite ease-in-out;
+  /* animation: shaking 2s infinite ease-in-out; */
 }
 
 @keyframes awan {
@@ -387,7 +387,7 @@ body {
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  animation: shaking 3s infinite;
+  /* animation: shaking 3s infinite; */
 }
 
 .setlist .main-title {
@@ -515,7 +515,7 @@ body {
   background-image: url("../assets/star.png");
   /* background-image: url("data:image/svg+xml,%3csvg  viewBox='0 0 269 277' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M267.448 139.472L267.41 131.722L225.707 121.261C225.705 121.26 225.702 121.26 225.7 121.259C205.613 116.13 187.402 105.413 173.189 90.358C158.975 75.3011 149.345 56.5256 145.421 36.2205C145.421 36.2204 145.421 36.2203 145.421 36.2202L138.663 1.24128L130.809 1.23818L124.016 36.2529L124.016 36.2554C120.092 56.5516 110.466 75.3187 96.258 90.3691C82.0504 105.419 63.8463 116.133 43.7664 121.261C43.7658 121.261 43.7653 121.261 43.7647 121.261L2.01203 131.903L1.98882 139.65L43.6709 150.54C63.7384 155.79 81.8951 166.62 96.0248 181.769C110.154 196.916 119.674 215.757 123.477 236.094C123.477 236.095 123.477 236.095 123.478 236.095L130.803 275.575L138.669 275.572L145.96 236.123L145.96 236.123C149.726 215.742 159.235 196.852 173.373 181.664C187.513 166.476 205.697 155.618 225.8 150.363L225.801 150.363L267.448 139.472Z' fill='url(%23paint0_linear_4378_28)' stroke='white' stroke-width='8'/%3e%3cdefs%3e%3clinearGradient id='paint0_linear_4378_28' x1='134.718' y1='2' x2='134.718' y2='274.845' gradientUnits='userSpaceOnUse'%3e%3cstop stop-color='%23935BA2'/%3e%3cstop offset='1' stop-color='%23EBA4C8'/%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e"); */
   background-size: cover;
-  animation: fall 9s linear infinite;
+  /* animation: fall 9s linear infinite; */
   z-index: 99999 !important;
 }
 @keyframes fall {
@@ -572,4 +572,8 @@ body {
 #leaf-container span:nth-child(11) {
   --random-x: 0.4;
   animation-delay: 6s;
+}
+
+.no-anim {
+  animation: unset !important;
 }
