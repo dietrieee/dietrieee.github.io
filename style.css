@@ -128,7 +128,9 @@ a {
   background-size: 170%;
   background-position: center;
 }
-
+.text-white {
+  color: #ffffff !important;
+}
 .client-image {
   width: 12em;
   height: auto;
