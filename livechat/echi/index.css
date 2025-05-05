@@ -150,8 +150,8 @@ yt-live-chat-text-message-renderer #content {
   background: rgb(145, 29, 202);
   background: linear-gradient(
     90deg,
-    rgba(145, 29, 202, 0.3) 0%,
-    rgba(197, 29, 202, 0.3) 100%
+    rgba(145, 29, 202, 0.5) 0%,
+    rgba(197, 29, 202, 0.5) 100%
   );
   border: 2px solid #d2b1ff;
   box-shadow: 0px 0px 8px 0px #f98dfc;
@@ -174,8 +174,8 @@ yt-live-chat-text-message-renderer[author-type="member"] #content {
   background: rgb(250, 114, 148);
   background: linear-gradient(
     90deg,
-    rgba(250, 114, 148, 0.3) 0%,
-    rgba(197, 29, 202, 0.3) 100%
+    rgba(250, 114, 148, 0.5) 0%,
+    rgba(197, 29, 202, 0.5) 100%
   );
 }
 
@@ -183,16 +183,16 @@ yt-live-chat-text-message-renderer[author-type="moderator"] #content {
   background: rgb(197, 29, 202);
   background: linear-gradient(
     90deg,
-    rgba(197, 29, 202, 0.3) 0%,
-    rgba(101, 190, 237, 0.3) 100%
+    rgba(197, 29, 202, 0.5) 0%,
+    rgba(101, 190, 237, 0.5) 100%
   );
 }
 yt-live-chat-text-message-renderer[author-type="owner"] #content {
   background: rgb(190, 134, 241);
   background: linear-gradient(
     90deg,
-    rgba(190, 134, 241, 0.3) 0%,
-    rgba(197, 29, 202, 0.3) 100%
+    rgba(190, 134, 241, 0.5) 0%,
+    rgba(197, 29, 202, 0.5) 100%
   );
 }
 
@@ -433,13 +433,13 @@ yt-live-chat-text-message-renderer #author-name.moderator {
 
 yt-live-chat-text-message-renderer #author-name {
   color: #fff !important;
-  font-weight: normal !important;
+  font-weight: 600 !important;
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 240px !important;
   text-align: left !important;
   padding: 6px 12px !important;
-  background: rgba(145, 29, 202, 0.4);
+  background: rgba(145, 29, 202, 0.6);
   background: linear-gradient(
     90deg,
     rgba(145, 29, 202, 0.4) 0%,
@@ -462,9 +462,9 @@ yt-live-chat-text-message-renderer #author-name {
 
 yt-live-chat-text-message-renderer #message {
   color: #fff !important;
-  font-weight: normal !important;
+  font-weight: 600 !important;
   text-align: left !important;
-  font-size: 30px !important;
+  font-size: 24px !important;
   transform: skewX(-15deg);
   line-height: normal !important;
   text-indent: 0% !important;
@@ -477,8 +477,8 @@ yt-live-chat-text-message-renderer #message {
 }
 
 yt-live-chat-text-message-renderer #message a {
-  color: #da8a93 !important;
-  font-size: 30px !important;
+  color: inherit !important;
+  font-size: inherit !important;
 }
 
 yt-live-chat-text-message-renderer #message img {
