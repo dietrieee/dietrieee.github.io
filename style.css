@@ -117,7 +117,12 @@ a {
   padding: 4px 8px;
   width: fit-content;
 }
-
+.tutorial-image {
+  width: 70%;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 2px 2px 0px 0px #030303;
+}
 .profile-image {
   width: 70px;
   height: 70px;
