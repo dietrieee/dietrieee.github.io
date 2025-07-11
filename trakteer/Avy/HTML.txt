@@ -1,0 +1,27 @@
+<div class="container is-media is-media-playing"> 
+  <div class="media-content">
+    <div class="player"></div>
+    <div class="animation"></div>
+  </div>
+
+  <div class="is-media is-media-playing mediaicon"></div>
+  <div class="is-media is-media-playing bawahicon"></div>
+  
+  <div class="stream-content">
+    <div class="box">
+      <span class="unit">{unit_count}x {unit_name}</span>
+      <span class="supporter">{supporter_name}</span>
+      <div class="message"><small>{support_message}</small></div>
+
+      <div class="lonceng"></div>
+      <div class="sayap-kiri"></div>
+      <div class="sayap-kanan"></div>
+      <div class="love"></div>
+      <div class="star-kiri"></div>
+      <div class="star-tengah"></div>
+      <div class="star-kanan"></div>
+      <div class="star-bawah-kiri"></div>
+      <div class="star-bawah-kanan"></div>
+    </div>
+  </div>
+</div>

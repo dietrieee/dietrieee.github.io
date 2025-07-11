@@ -88,8 +88,10 @@ body {
 }
 .list-container {
   /* width: 5em; */
+  /* background-color: black; */
+  width: 100%;
   margin-left: 0.5em;
-  height: auto;
+  /* height: auto; */
   display: block;
   flex-direction: column;
   /* align-items: start; */
@@ -97,17 +99,25 @@ body {
   align-self: self-start;
   /* justify-content: start; */
   margin-top: 0px;
+  height: 500px;
+  overflow: hidden !important;
 }
+@keyframes autoscroll {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+
 .list {
-  height: auto;
+  height: 395px;
   width: 100%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: start;
-  justify-content: start;
+
   margin-top: 0px;
-  overflow: visible !important;
+  overflow-y: scroll !important;
+  transition: opacity 0.5s ease-in-out;
 }
 
 @keyframes rotation {
@@ -301,11 +311,11 @@ body {
 }
 
 #kaset {
-  width: 36px;
-  height: 36px;
+  width: 45px;
+  height: 45px;
   position: absolute;
-  top: 33.8px;
-  left: 40px;
+  top: 30px;
+  left: 35px;
 
   z-index: 99 !important;
   content: url("../assets/kaset.png");

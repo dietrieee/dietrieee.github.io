@@ -5,12 +5,16 @@ twitter:  @dietrieee
 
 for Syasya Adesya (Anomali Biru) 
 */
-
-@import url("https://fonts.googleapis.com/css2?family=Medula+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap");
 * {
-  font-family: "Medula One", system-ui;
+  /* font-family: "Libre Baskerville", serif; */
+  font-family: "Comic Relief", system-ui;
+  /* background-color: white; */
 }
-
+#before-content-buttons {
+  display: none !important;
+}
 yt-live-chat-renderer {
   background-color: transparent !important;
   margin-top: 60px;
@@ -157,9 +161,18 @@ yt-live-chat-text-message-renderer #content {
   margin-left: 44px;
   margin-right: 98px;
   position: relative;
-  filter: drop-shadow(0px 0px 0px #0000) !important;
+  filter: drop-shadow(0px 0px 0px #fff6f6) drop-shadow(2px 2px 3px #3b2c91);
   display: block;
   /* box-shadow: 0px 0px 0px 4px #fff6f6, 8px 8px 0px 4px #f3958e; */
+}
+
+yt-live-chat-text-message-renderer[author-type="owner"] #content {
+  background: linear-gradient(
+    90deg,
+    rgb(255, 255, 255) 0%,
+    rgb(140, 171, 214) 100%
+  );
+  border-color: #424d7c;
 }
 
 yt-live-chat-text-message-renderer[author-type="owner"],
@@ -408,7 +421,7 @@ yt-live-chat-text-message-renderer #author-name {
   top: -48px;
   left: 14px;
   border-radius: 34px !important;
-  font-size: 28px !important;
+  font-size: 22px !important;
   position: absolute;
   /* border: 2px solid #fff; */
   z-index: 1;
@@ -421,7 +434,7 @@ yt-live-chat-text-message-renderer #message {
   color: #fff !important;
   font-weight: normal !important;
   text-align: left !important;
-  font-size: 28px !important;
+  font-size: 22px !important;
   line-height: normal !important;
   text-indent: 0% !important;
   word-wrap: break-word;
@@ -429,7 +442,9 @@ yt-live-chat-text-message-renderer #message {
   display: inline-block;
   margin-top: 8px !important;
 }
-
+yt-live-chat-text-message-renderer[author-type="owner"] #message {
+  color: #424d7c !important;
+}
 yt-live-chat-text-message-renderer #message a {
   color: inherit !important;
   font-size: inherit !important;

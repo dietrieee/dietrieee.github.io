@@ -1,0 +1,276 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  overflow: hidden;
+}
+
+.header {
+  background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+  padding: 30px;
+  text-align: center;
+  color: white;
+}
+
+.header h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.header p {
+  opacity: 0.9;
+  font-size: 1.1em;
+}
+
+.input-section {
+  padding: 30px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.song-inputs {
+  display: flex;
+  gap: 10px;
+}
+
+#songInput,
+#artistInput {
+  flex: 1;
+  padding: 15px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+#songInput:focus,
+#artistInput:focus {
+  border-color: #667eea;
+}
+
+#addBtn {
+  padding: 15px 25px;
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: transform 0.2s;
+}
+
+#addBtn:hover {
+  transform: translateY(-2px);
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.control-btn {
+  padding: 10px 15px;
+  border: 2px solid #667eea;
+  background: white;
+  color: #667eea;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s;
+}
+
+.control-btn:hover {
+  background: #667eea;
+  color: white;
+}
+
+.control-btn.active {
+  background: #667eea;
+  color: white;
+}
+
+.control-group {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+  transition: all 0.3s ease;
+}
+
+.control-group.hidden {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.speed-control {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#speedSlider {
+  width: 100px;
+}
+
+.song-container {
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+  background: linear-gradient(180deg, #1e3c72 0%, #2a5298 100%);
+}
+
+.song-list {
+  animation: scroll-up 8s linear infinite;
+  padding: 20px 0;
+}
+
+.song-list.paused {
+  animation-play-state: paused;
+}
+
+@keyframes scroll-up {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+.song-item {
+  background: rgba(255, 255, 255, 0.95);
+  margin: 10px 20px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  transition: all 0.3s;
+  border-left: 4px solid #ff6b6b;
+  backdrop-filter: blur(10px);
+}
+
+.song-item:hover {
+  transform: translateX(5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.song-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.song-info {
+  flex: 1;
+}
+
+.song-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.song-artist {
+  font-size: 14px;
+  color: #666;
+  font-style: italic;
+}
+
+.song-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.delete-btn {
+  background: #ff4757;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: all 0.3s;
+}
+
+.delete-btn:hover {
+  background: #ff3742;
+  transform: scale(1.05);
+}
+
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  color: rgba(255, 255, 255, 0.8);
+  font-style: italic;
+}
+
+.empty-state h3 {
+  color: white;
+  margin-bottom: 10px;
+}
+
+.stats {
+  padding: 20px 30px;
+  background: #f8f9fa;
+  text-align: center;
+  color: #666;
+  font-size: 14px;
+}
+
+.music-note {
+  display: inline-block;
+  animation: float 2s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}

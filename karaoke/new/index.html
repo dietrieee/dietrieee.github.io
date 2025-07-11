@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auto-Scrolling Song List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>🎵 Music Playlist</h1>
+      <p>Your songs in endless motion</p>
+    </div>
+
+    <div class="input-section">
+      <div class="input-group">
+        <div class="song-inputs">
+          <input type="text" id="songInput" placeholder="Song title..." maxlength="50">
+          <input type="text" id="artistInput" placeholder="Artist name..." maxlength="50">
+        </div>
+        <button id="addBtn">🎵 Add Song</button>
+      </div>
+
+      <div class="controls">
+        <button class="control-btn" id="toggleControlsBtn">👁️ Hide Controls</button>
+        <div class="control-group" id="controlGroup">
+          <button class="control-btn" id="pauseBtn">⏸️ Pause</button>
+          <button class="control-btn" id="shuffleBtn">🔀 Shuffle</button>
+          <button class="control-btn" id="clearBtn">🗑️ Clear All</button>
+          <div class="speed-control">
+            <span>Speed:</span>
+            <input type="range" id="speedSlider" min="3" max="60" value="50">
+            <span id="speedValue">50s</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="song-container">
+      <div class="song-list" id="songList">
+        <div class="empty-state">
+          <h3>🎼 No songs yet!</h3>
+          <p>Add some tracks above to start your playlist</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="stats">
+      <span id="totalSongs">0</span> total songs •
+      <span class="music-note">♪</span> Now playing: <span id="nowPlaying">No songs</span>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

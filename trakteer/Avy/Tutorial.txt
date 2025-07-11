@@ -1,0 +1,16 @@
+Cara pasang
+
+Setting di Trakteer
+1. masuk menu "Stream Overlay" pada halaman web Trakteer.id
+2. masuk menu "Notification Box"
+3. ubah Tema dari "Default" ke "Custom"
+4. Copy semua isi dari HTML.txt ke bagian HTML
+5. Copy semua isi dari CSS.txt ke bagian CSS
+
+Setting Di OBS
+1. Copy Widget URL pada Trakteer.id (contoh: https://stream.trakteer.id/notification/index.html?....)
+2. Pada OBS menu Sources "Create New Browser"
+3. masukan URL dengan Widget URL pada Trakteer
+4. ubah Width ke 800
+5. ubah height ke 620 (ideal)
+6. jika sudah tekan "OK"
