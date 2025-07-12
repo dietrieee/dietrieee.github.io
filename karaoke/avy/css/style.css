@@ -61,12 +61,21 @@ body {
   justify-content: center;
   font-size: 12px;
   padding: 2px;
-  background-color: #cfc6f9;
+  background-color: rgba(125, 147, 197, 0.6);
   opacity: 0;
   z-index: 1;
   margin-top: 6px;
   border-radius: 4px;
   border: none;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.btn-edit {
+  top: 22px;
+}
+.btn-delete {
+  top: 44px;
 }
 
 @keyframes updown {
@@ -80,21 +89,41 @@ body {
     transform: translateY(5px);
   }
 }
+/* tambahan */
+@keyframes smoothScroll {
+  0% {
+    transform: translateY(0);
+  }
+  90% {
+    transform: translateY(calc(-100% + 400px));
+  }
+  95% {
+    transform: translateY(calc(-100% + 400px));
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+}
+/* edit */
 .list-container {
   /* width: 5em; */
   background-color: transparent;
   width: 100%;
-  margin-left: 3.5em;
 
-  /* height: auto; */
-  display: flex;
-  flex-direction: column;
-  align-items: end;
-  /* justify-self: start; */
-  /* align-self: self-start; */
-  justify-content: start;
-  margin-top: -60px;
-  height: 500px;
+  height: 400px !important;
+  overflow-y: scroll !important;
+  overflow: hidden;
+  margin-top: 0px;
+  /* padding-right: 150px; */
+  margin-left: 70px !important;
+  padding-left: 200px;
+  /* display: contents; */
+}
+/* tambahan */
+.list-container.scroll-active {
+  overflow-y: hidden !important;
 }
 @keyframes autoscroll {
   from {
@@ -122,16 +151,21 @@ body {
   background-color: #463b66;
 }
 
+/* edit */
 .list {
-  height: 375px;
   width: fit-content;
   /* background-color: blue; */
-  display: flex;
-  flex-direction: column;
-  align-items: end;
+  /* overflow-y: scroll; */
   margin-top: 0px;
-  overflow-y: scroll !important;
-  transition: opacity 0.5s ease-in-out;
+  /* animation: smoothScroll 15s infinite linear; */
+  animation-play-state: paused;
+  display: block;
+}
+/* tambahan*/
+.scroll-active #song-list {
+  animation: smoothScroll 15s linear infinite;
+  animation-play-state: running;
+  /* overflow-y: hidden; */
 }
 
 @keyframes rotation {

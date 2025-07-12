@@ -4,67 +4,13 @@ var state = "add";
 var editType = "";
 var _index = 0;
 const $div = $("#song-list");
-let scrollInterval;
-let scrollSpeed = 0.5; // pixels per frame
-let scrollActive = true;
-
-// Smooth scrolling function
-function smoothScroll() {
-  const currentPos = $div.scrollTop();
-  const maxScroll = $div[0].scrollHeight - $div.height();
-
-  // Reset to top if we reach bottom (optional)
-  if (currentPos >= maxScroll) {
-    setTimeout(restartWithFade, 1000); // Restart with fade after 1 second
-    // $div.scrollTop(0);
-    return;
-  }
-
-  $div.scrollTop(currentPos + scrollSpeed);
-}
-function restartWithFade() {
-  isTransitioning = true;
-
-  // Fade out
-  $div.css("opacity", "0");
-
-  setTimeout(function () {
-    // Reset position (above the container)
-    $div.scrollTop(0);
-
-    // Fade in
-    setTimeout(function () {
-      $div.css("opacity", "1");
-      isTransitioning = false;
-    }, 50);
-  }, 500); // Match this with transition duration
-}
-
-function startScrolling() {
-  if (!scrollInterval && list.length >= 5) {
-    console.log("start scroll", scrollInterval, scrollActive);
-    setTimeout(() => {
-      scrollInterval = setInterval(smoothScroll, 20);
-      scrollActive = true;
-    }, 1500);
-  }
-}
-
-function stopScrolling() {
-  if (scrollInterval) {
-    clearInterval(scrollInterval); // ← this is the missing piece
-    scrollInterval = null;
-  }
-  scrollActive = false;
-  console.log("stop scroll", scrollInterval, scrollActive);
-}
 
 $("#scrollSwitch").on("change", function () {
-  console.log("switch", $(this).is(":checked"));
+  const wrapper = document.getElementById("listWrapper");
   if ($(this).is(":checked")) {
-    startScrolling();
+    wrapper.classList.add("scroll-active");
   } else {
-    stopScrolling();
+    wrapper.classList.remove("scroll-active");
   }
 });
 
