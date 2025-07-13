@@ -115,7 +115,7 @@ body {
   height: 400px !important;
   overflow-y: scroll !important;
   overflow: hidden;
-  margin-top: 0px;
+  margin-top: -70px;
   /* padding-right: 150px; */
   margin-left: 70px !important;
   padding-left: 200px;
