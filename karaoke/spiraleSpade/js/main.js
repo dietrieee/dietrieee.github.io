@@ -9,7 +9,6 @@ $("#scrollSwitch").on("change", function () {
   const wrapper = document.getElementById("listWrapper");
   if ($(this).is(":checked")) {
     wrapper.scrollTo(0, 0);
-
     wrapper.classList.add("scroll-active");
   } else {
     wrapper.classList.remove("scroll-active");
@@ -48,8 +47,8 @@ $("#song-list").sortable({
 $(".list-container")
   .on("mouseenter", ".s-container", function () {
     $(this).find(".btn-action").css({
-      "margin-left": "8px",
-      "margin-top": "6px",
+      "margin-left": "20px",
+      "margin-top": "24px",
 
       opacity: 1,
       transition: "0.5s",
@@ -59,7 +58,12 @@ $(".list-container")
   .on("mouseleave", ".s-container", function () {
     $(this)
       .find(".btn-action")
-      .css({ "margin-left": "-20px", opacity: "0", "z-index": "-9999" });
+      .css({
+        "margin-left": "20px",
+        "margin-top": "24px",
+        opacity: "0",
+        "z-index": "-9999",
+      });
   });
 
 function updateList(data, index) {
@@ -71,7 +75,16 @@ function updateList(data, index) {
 function addList(data, type) {
   if (type == "list") {
     $("#song-list").append(
-      `<div class='s-container' type="list"><div class="parent-title"><div class="title ">${data.value}</div></div><button onclick="edit(${data.id}, 'list')"class="btn btn-action btn-light btn-edit  action"><i class="icon-pencil"></i></button><button onclick="deleteSong(${data.id}, 'list')"class="btn btn-light btn-delete btn-action  action"><i class="icon-eraser"></i></button><button onclick="play(${data.id})"class="btn btn-action btn-light btn-play  action"><i class="icon-play"></i></button></div>`
+      `<div class='s-container' type="list">
+        <div class="parent-title">
+          <div class="title ">
+          ${data.value}
+          </div>
+        </div>
+        <button onclick="edit(${data.id}, 'list')"class="btn btn-action btn-light btn-edit  action"><i class="icon-pencil"></i></button>
+        <button onclick="deleteSong(${data.id}, 'list')"class="btn btn-light btn-delete btn-action  action"><i class="icon-eraser"></i></button>
+        <button onclick="play(${data.id})"class="btn btn-action btn-light btn-play  action"><i class="icon-play"></i></button>
+      </div>`
     );
   }
 }
