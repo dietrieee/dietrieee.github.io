@@ -56,14 +56,12 @@ $(".list-container")
     });
   })
   .on("mouseleave", ".s-container", function () {
-    $(this)
-      .find(".btn-action")
-      .css({
-        "margin-left": "20px",
-        "margin-top": "24px",
-        opacity: "0",
-        "z-index": "-9999",
-      });
+    $(this).find(".btn-action").css({
+      "margin-left": "20px",
+      "margin-top": "24px",
+      opacity: "0",
+      "z-index": "-9999",
+    });
   });
 
 function updateList(data, index) {
@@ -74,18 +72,37 @@ function updateList(data, index) {
 }
 function addList(data, type) {
   if (type == "list") {
-    $("#song-list").append(
-      `<div class='s-container' type="list">
+    if (data.value.length >= 20) {
+      $("#song-list").append(
+        `<div class='s-container' type="list">
         <div class="parent-title">
-          <div class="title ">
-          ${data.value}
+          <div class="title-container">
+            <div class="title marquee-active" >
+            ${data.value}
+            </div>
           </div>
         </div>
         <button onclick="edit(${data.id}, 'list')"class="btn btn-action btn-light btn-edit  action"><i class="icon-pencil"></i></button>
         <button onclick="deleteSong(${data.id}, 'list')"class="btn btn-light btn-delete btn-action  action"><i class="icon-eraser"></i></button>
         <button onclick="play(${data.id})"class="btn btn-action btn-light btn-play  action"><i class="icon-play"></i></button>
       </div>`
-    );
+      );
+    } else {
+      $("#song-list").append(
+        `<div class='s-container' type="list">
+        <div class="parent-title">
+          <div class="title-container">
+            <div class="title" >
+            ${data.value}
+            </div>
+          </div>
+        </div>
+        <button onclick="edit(${data.id}, 'list')"class="btn btn-action btn-light btn-edit  action"><i class="icon-pencil"></i></button>
+        <button onclick="deleteSong(${data.id}, 'list')"class="btn btn-light btn-delete btn-action  action"><i class="icon-eraser"></i></button>
+        <button onclick="play(${data.id})"class="btn btn-action btn-light btn-play  action"><i class="icon-play"></i></button>
+      </div>`
+      );
+    }
   }
 }
 
